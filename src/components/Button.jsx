@@ -7,14 +7,23 @@ const Button = ({ className, href, onClick, children, px, white }) => {
     className || ""
   }`;
 
+  const spanClasses = "relative z-10";
+
   const renderButton = () => (
     <button className={classes}>
-      <span>{children}</span>
+      <span className={spanClasses}>{children}</span>
       {ButtonSvg(white)}
     </button>
   );
 
-  return renderButton();
-};
+  const renderLink = () => (
+    <a href={href} className={classes}>
+      <span className={spanClasses}>{children}</span>
+      {ButtonSvg(white)}
+    </a>
+  );
+
+  return href ? renderLink() : renderButton();
+}; 
 
 export default Button;
