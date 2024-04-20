@@ -50,7 +50,7 @@ const Header = () => {
                         ${item.onlyMobile ? 'lg:hidden' : ''} px-6 py-6 md:py-8 lg:-mr-0.25 lg:text-xs lg:font-semibold
                         ${item.url === pathname.hash ? 'z-2 lg:text-n-1' : 'lg:text-n-1/50'
                     }   lg:leading-5 lg:hover:text-n-1 xl:px-12
-                    flex h-8 select-none items-center justify-center rounded-full border px-4 text-sm font-medium transition duration-100 ease-out focus:outline-none focus:ring-2 focus:ring-[var(--label-title)] border-transparent bg-transparent text-[var(--label-base)] transition duration-100 ease-out hover:border-[var(--border-base)] hover:bg-[var(--bg-translucent)] hover:text-[var(--label-title)] focus:text-[var(--label-title)] focus:outline-none cursor-default`}
+                    flex h-8 select-none items-center justify-center rounded-full border px-4 text-sm font-medium transition duration-100 ease-out focus:ring-2 focus:ring-[var(--label-title)] border-transparent bg-transparent text-[var(--label-base)]  hover:border-[var(--border-base)] hover:bg-[var(--bg-translucent)] hover:text-[var(--label-title)] focus:text-[var(--label-title)] focus:outline-none cursor-default`}
                         >
                             {item.title}
                         </a>
