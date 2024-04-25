@@ -40,11 +40,11 @@ const Hero = () => {
           visando torná-la uma cidade moderna, acolhedora e próspera.
           </p>
           <Button href="/pricing" white>
-            SOBRE A CODESF
+            SOBRE O CODESF
           </Button>
         </div>
         <div className="relative max-w-[23rem] mx-auto md:max-w-5xl xl:mb-24">
-          <div className="relative z-1 p-0.5 rounded-2xl bg-conic-gradient">
+          <div className="relative z-1 p-0.5 rounded-2xl">
             <div className="relative bg-n-8 rounded-[1rem]">
               <div className="h-[1.4rem] bg-n-10 rounded-t-[0.9rem]" />
 
@@ -71,8 +71,8 @@ const Hero = () => {
 
                 <ScrollParallax isAbsolutelyPositioned>
                   <Notification
-                    className="hidden absolute -right-[5.5rem] bottom-[11rem] w-[18rem] xl:flex"
-                    title="Code generation"
+                    className="hidden absolute -right-[5.5rem] bottom-[15rem] w-[18rem] xl:flex"
+                    title="Frutal 2050"
                   />
                 </ScrollParallax>
               </div>

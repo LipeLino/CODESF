@@ -10,6 +10,14 @@ export default {
   ],
   theme: {
     extend: {
+      fontSize: {
+        "1.25xl": "1.25rem",
+        "2.5xl": "1.625rem",
+        "3.25xl": "2.125rem",
+        "3.75xl": "2.375rem",
+        "4.25xl": "2.625rem",
+        "4.5xl": "2.875rem",
+      },
       colors: {
         color: {
           1: "#8AA39B",
