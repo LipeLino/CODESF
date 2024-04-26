@@ -10,6 +10,17 @@ export default {
   ],
   theme: {
     extend: {
+      height: {
+        200: "200",
+      },
+      transitionDuration: {
+        DEFAULT: "200ms",
+        1500: "1500ms",
+        2000: "2000ms",
+        3000: "3000ms",
+        4000: "4000ms",
+        5000: "5000ms",
+      },
       fontSize: {
         "1.25xl": "1.25rem",
         "2.5xl": "1.625rem",
@@ -64,9 +75,6 @@ export default {
       },
       opacity: {
         15: ".15",
-      },
-      transitionDuration: {
-        DEFAULT: "200ms",
       },
       transitionTimingFunction: {
         DEFAULT: "linear",

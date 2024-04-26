@@ -14,9 +14,9 @@ const Hero = () => {
 
   return (
     <Section
-      className="pt-[12rem] -mt-[5.25rem]"
+      className="pt-[14.5rem] -mt-[5.25rem]"
       crosses
-      crossesOffset="lg:translate-y-[5.25rem]"
+      crossesOffset="lg:translate-y-[115.75rem]"
       customPaddings
       id="hero"
     >
@@ -36,8 +36,9 @@ const Hero = () => {
             </span>
           </h1>
           <p className="body-1 max-w-3xl mx-auto mb-6 text-n-2 lg:mb-8">
-          O CODESF reúne diversos setores da sociedade para impulsionar o desenvolvimento sustentável de Frutal, 
-          visando torná-la uma cidade moderna, acolhedora e próspera.
+            O CODESF reúne diversos setores da sociedade para impulsionar o
+            desenvolvimento sustentável de Frutal, visando torná-la uma cidade
+            moderna, acolhedora e próspera.
           </p>
           <Button href="/pricing" white>
             SOBRE O CODESF
@@ -83,7 +84,7 @@ const Hero = () => {
           <div className="absolute -top-[54%] left-1/2 w-[234%] -translate-x-1/2 md:-top-[46%] md:w-[138%] lg:-top-[104%]">
             <img
               src={heroBackground}
-              className="w-full"
+              className="w-full h-full"
               width={1440}
               height={1800}
               alt="hero"

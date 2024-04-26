@@ -1,16 +1,31 @@
 import { useLocation } from "react-router-dom";
 import { disablePageScroll, enablePageScroll } from "scroll-lock";
+import { useState, useEffect } from "react";
 
 import { logocodesf2 } from "../assets";
 import { navigation } from "../constants";
 import Button from "./Button";
 import MenuSvg from "../assets/svg/MenuSvg";
 import { HamburgerMenu } from "./design/Header";
-import { useState } from "react";
 
 const Header = () => {
   const pathname = useLocation();
   const [openNavigation, setOpenNavigation] = useState(false);
+
+  const [showNav, setShowNav] = useState(true);
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      setShowNav(prevScrollPos > currentScrollY || currentScrollY <= 0);
+      setPrevScrollPos(currentScrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [prevScrollPos]);
 
   const toggleNavigation = () => {
     if (openNavigation) {
@@ -31,19 +46,19 @@ const Header = () => {
 
   return (
     <div
-      className={`fixed top-0 left-0 w-full z-50  border-b border-n-6 lg:bg-n-8/90 lg:backdrop-blur-sm ${
-        openNavigation ? "bg-n-8" : "bg-n-8/90 backdrop-blur-sm"
-      }`}
+      className={`fixed top-0 left-0 w-full z-50 lg:bg-transparent lg:backdrop-blur-sm transition-all lg:backdrop-opacity-0 duration-1000 ${
+        openNavigation ? "bg-transparent" : "bg-transparent backdrop-blur-sm"
+      } ${showNav ? "opacity-100 visible" : "opacity-0 invisible"}`}
     >
       <div className="flex items-center px-5 lg:px-7.5 xl:px-10 max-lg:py-4">
-        <a className="block w-[12rem] xl:mr-8" href="#hero">
-          <img src={logocodesf2} width={190} height alt="Logo CODESF" />
+        <a className="block w-[12rem] xl:mr-8 pl-8 border" href="#hero">
+          <img src={logocodesf2} width={160} height={30} alt="Logo CODESF" />
         </a>
 
         <nav
           className={`${
             openNavigation ? "flex" : "hidden"
-          } fixed top-[5rem] left-0 right-0 bottom-0 bg-n-8 lg:static lg:flex lg:mx-auto lg:bg-transparent`}
+          } fixed top-[5rem] left-0 right-0 bottom-0 bg-transparent lg:static lg:flex lg:mx-auto lg:bg-transparent`}
         >
           <div className="relative z-2 flex flex-col items-center justify-center m-auto lg:flex-row">
             {navigation.map((item) => (
@@ -53,7 +68,7 @@ const Header = () => {
                 onClick={handleClick}
                 className={`block relative font-code text-2xl uppercase text-n-1 transition-colors hover:text-color-1 ${
                   item.onlyMobile ? "lg:hidden" : ""
-                } px-6 py-6 md:py-8 lg:-mr-0.25 lg:text-xs lg:font-semibold ${
+                } px-6 py-6 md:py-8 lg:-mr-0.25 lg:text-base lg:font-semibold ${
                   item.url === pathname.hash
                     ? "z-2 lg:text-n-1"
                     : "lg:text-n-1/50"
@@ -67,15 +82,11 @@ const Header = () => {
           <HamburgerMenu />
         </nav>
 
-        <a
-          href="#signup"
-          className="button hidden mr-8 text-n-1/50 transition-colors hover:text-n-1 lg:block"
-        >
-          New account
-        </a>
-        <Button className="hidden lg:flex" href="#login">
-          Sign in
-        </Button>
+        <div className="pr-8">
+          <Button className="hidden lg:flex" href="#login">
+            ENTRAR
+          </Button>
+        </div>
 
         <Button
           className="ml-auto lg:hidden"
