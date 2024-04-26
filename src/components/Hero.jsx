@@ -8,6 +8,9 @@ import { useRef } from "react";
 import Generating from "./Generating";
 import Notification from "./Notification";
 import CompanyLogos from "./CompanyLogos";
+import TypeWriterEffect from "react-typewriter-effect";
+
+const myAppRef = document.querySelector(".scrollable-div");
 
 const Hero = () => {
   const parallaxRef = useRef(null);
@@ -16,14 +19,23 @@ const Hero = () => {
     <Section
       className="pt-[14.5rem] -mt-[5.25rem]"
       crosses
-      crossesOffset="lg:translate-y-[115.75rem]"
+      crossesOffset="lg:translate-y-[116.5rem]"
       customPaddings
       id="hero"
     >
       <div className="container relative" ref={parallaxRef}>
         <div className="relative z-1 max-w-[62rem] mx-auto text-center mb-[3.875rem] md:mb-20 lg:mb-[6.25rem]">
           <h1 className="h1 mb-6">
-            Explore o Futuro de&nbsp;Frutal&nbsp; {` `}
+            <div className="flex justify-center">
+              <TypeWriterEffect
+                startDelay={100}
+                cursorColor="black"
+                text="Explore o Futuro de Frutal"
+                typeSpeed={100}
+                scrollArea={myAppRef}
+                hideCursorAfterText={true}
+              />
+            </div>
             <span className="inline-block relative">
               CODESF{" "}
               <img
@@ -81,7 +93,7 @@ const Hero = () => {
 
             <Gradient />
           </div>
-          <div className="absolute -top-[54%] left-1/2 w-[234%] -translate-x-1/2 md:-top-[46%] md:w-[138%] lg:-top-[104%]">
+          <div className="absolute -mt-22 -top-[54%] left-1/2 w-[234%] -translate-x-1/2 md:-top-[46%] md:w-[138%] lg:-top-[104%]">
             <img
               src={heroBackground}
               className="w-full h-full"

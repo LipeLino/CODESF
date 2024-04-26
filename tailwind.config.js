@@ -10,9 +10,6 @@ export default {
   ],
   theme: {
     extend: {
-      height: {
-        200: "200",
-      },
       transitionDuration: {
         DEFAULT: "200ms",
         1500: "1500ms",
@@ -72,6 +69,7 @@ export default {
         0.25: "0.0625rem",
         7.5: "1.875rem",
         15: "3.75rem",
+        22: "5.5rem",
       },
       opacity: {
         15: ".15",
