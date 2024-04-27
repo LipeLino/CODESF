@@ -1,10 +1,10 @@
 import { useLocation } from "react-router-dom";
 import { disablePageScroll, enablePageScroll } from "scroll-lock";
 import { useState, useEffect } from "react";
+import React from "react";
 
 import { logocodesf2 } from "../assets";
 import { navigation } from "../constants";
-import Button from "./Button";
 import MenuSvg from "../assets/svg/MenuSvg";
 import { HamburgerMenu } from "./design/Header";
 
@@ -46,36 +46,40 @@ const Header = () => {
 
   return (
     <div
-      className={`fixed top-0 left-0 w-full z-50 lg:bg-transparent lg:backdrop-blur-sm transition-all lg:backdrop-opacity-0 duration-1000 ${
-        openNavigation ? "bg-transparent" : "bg-transparent backdrop-blur-sm"
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-1000 max-lg:bg-n-8/50 max-lg:backdrop-blur-sm${
+        openNavigation ? "bg-transparent" : "bg-transparent"
       } ${showNav ? "opacity-100 visible" : "opacity-0 invisible"}`}
     >
-      <div className="flex items-center px-5 lg:px-7.5 xl:px-10 max-lg:py-4">
-        <a className="block w-[12rem] xl:mr-8 pl-8 border" href="#hero">
+      <div className="flex items-center px-5 lg:px-7.5 xl:px-20 max-lg:py-4">
+        <a className="w-[12rem] h-[4.5rem] lg:mx-5 xl:mr-8 pl-2 md:border md:rounded-extra-3xl md:border-color-ivory md:backdrop-blur-lg transition-all duration-1000  md:bg-n-8/30 box-sizing:border-box items-center justify-center" href="#hero">
           <img src={logocodesf2} width={160} height={30} alt="Logo CODESF" />
         </a>
 
         <nav
           className={`${
             openNavigation ? "flex" : "hidden"
-          } fixed top-[5rem] left-0 right-0 bottom-0 bg-transparent lg:static lg:flex lg:mx-auto lg:bg-transparent`}
+          } fixed top-[10rem] bottom-[10rem] left-0 right-0 lg:static lg:flex lg:mx-auto`}
         >
-          <div className="relative z-2 flex flex-col items-center justify-center m-auto lg:flex-row">
-            {navigation.map((item) => (
-              <a
-                key={item.id}
-                href={item.url}
-                onClick={handleClick}
-                className={`block relative font-code text-2xl uppercase text-n-1 transition-colors hover:text-color-1 ${
-                  item.onlyMobile ? "lg:hidden" : ""
-                } px-6 py-6 md:py-8 lg:-mr-0.25 lg:text-base lg:font-semibold ${
-                  item.url === pathname.hash
-                    ? "z-2 lg:text-n-1"
-                    : "lg:text-n-1/50"
-                } lg:leading-5 lg:hover:text-n-1 xl:px-12`}
-              >
-                {item.title}
-              </a>
+          <div className="relative z-2 flex flex-col items-center justify-center m-auto lg:flex-row border rounded-extra-3xl border-color-ivory my-4 bg-n-8/30 backdrop-blur-lg"> 
+            {navigation.map((item, index) => (          
+              <React.Fragment key={item.id} className="hidden lg:flex">
+                <a
+                  href={item.url}
+                  onClick={handleClick}
+                  className={`block relative font-code text-2xl uppercase text-n-1 transition-colors hover:text-color-1 ${
+                    item.onlyMobile ? "lg:hidden" : ""
+                  } px-6 py-6 md:py-8 lg:-mr-0.25 lg:text-base lg:font-semibold ${
+                    item.url === pathname.hash
+                      ? "z-2 lg:text-n-1"
+                      : "lg:text-n-1/50"
+                  } lg:leading-none lg:hover:text-n-1 xl:px-12 `}
+                > 
+                  {item.title} 
+                </a>
+                {index !== navigation.length - 1 && (
+                  <div className="h-10 w-px bg-gradient-to-b from-transparent via-color-ivory to-transparent last:hidden"></div>
+                )}
+              </React.Fragment>
             ))}
           </div>
 
@@ -83,18 +87,17 @@ const Header = () => {
         </nav>
 
         <div className="pr-8">
-          <Button className="hidden lg:flex" href="#login">
+          <button className="hidden lg:flex w-[12rem] h-[4.5rem] md:border md:rounded-extra-3xl md:border-color-ivory md:backdrop-blur-lg transition-all duration-1000  md:bg-n-8/30 box-sizing:border-box items-center justify-center" href="#login">
             ENTRAR
-          </Button>
+          </button>
         </div>
 
-        <Button
-          className="ml-auto lg:hidden"
-          px="px-3"
+        <button
+          className="ml-auto lg:hidden"      
           onClick={toggleNavigation}
         >
           <MenuSvg openNavigation={openNavigation} />
-        </Button>
+        </button>
       </div>
     </div>
   );

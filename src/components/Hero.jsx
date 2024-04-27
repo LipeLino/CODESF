@@ -25,8 +25,8 @@ const Hero = () => {
     >
       <div className="container relative" ref={parallaxRef}>
         <div className="relative z-1 max-w-[62rem] mx-auto text-center mb-[3.875rem] md:mb-20 lg:mb-[6.25rem]">
-          <h1 className="h1 mb-6">
-            <div className="flex justify-center">
+          <h1 className="h2 mb-6 sm:h1">
+            <div className="flex justify-center drop-shadow-2xl">
               <TypeWriterEffect
                 startDelay={100}
                 cursorColor="black"
@@ -34,10 +34,20 @@ const Hero = () => {
                 typeSpeed={100}
                 scrollArea={myAppRef}
                 hideCursorAfterText={true}
+                className="drop-shadow-2xl"
               />
             </div>
             <span className="inline-block relative">
-              CODESF{" "}
+            <div className="flex justify-center drop-shadow-lg">
+              <TypeWriterEffect
+                startDelay={2700}
+                cursorColor="black"
+                text="CODESF"
+                typeSpeed={200}
+                scrollArea={myAppRef}
+                hideCursorAfterText={true}
+              />
+            </div>
               <img
                 src={curve}
                 className="absolute top-full left-0 w-full xl:-mt-2"
@@ -47,7 +57,7 @@ const Hero = () => {
               />
             </span>
           </h1>
-          <p className="body-1 max-w-3xl mx-auto mb-6 text-n-2 lg:mb-8">
+          <p className="body-1 max-w-3xl mx-auto mb-6 text-n-2 lg:mb-8 drop-shadow-2xl max-lg:text-center">
             O CODESF reúne diversos setores da sociedade para impulsionar o
             desenvolvimento sustentável de Frutal, visando torná-la uma cidade
             moderna, acolhedora e próspera.
@@ -93,7 +103,7 @@ const Hero = () => {
 
             <Gradient />
           </div>
-          <div className="absolute -mt-22 -top-[54%] left-1/2 w-[234%] -translate-x-1/2 md:-top-[46%] md:w-[138%] lg:-top-[104%]">
+          <div className="absolute sm:-mt-22 -top-[108%] left-1/2 h-[260%] w-[234%] -translate-x-1/2 md:-top-[104%] md:w-[138%] lg:-top-[104%] lg:h-[332%]">
             <img
               src={heroBackground}
               className="w-full h-full"
@@ -103,7 +113,7 @@ const Hero = () => {
             />
           </div>
 
-          <BackgroundCircles />
+          <BackgroundCircles className="animate-rotate-slow"/>
         </div>
 
         <CompanyLogos className="hidden relative z-10 mt-20 lg:block" />

@@ -10,7 +10,7 @@ const Benefits = () => {
     <Section id="organizacao">
       <div className="container relative z-2">
         <Heading
-          className="md:max-w-md lg:max-w-3xl"
+          className="md:max-w-md lg:max-w-3xl max-lg:text-center h1"
           title="Crescimento e Prosperidade, Nossa Prioridade"
         />
 

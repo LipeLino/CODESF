@@ -18,6 +18,164 @@
   scroll-behavior: smooth;
 }
 
+@keyframes rotate1 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate2 {
+  0% {
+    transform: rotate(30deg);
+  }
+  100% {
+    transform: rotate(390deg);
+  }
+}
+
+@keyframes rotate3 {
+  0% {
+    transform: rotate(60deg);
+  }
+  100% {
+    transform: rotate(420deg);
+  }
+}
+
+@keyframes rotate4 {
+  0% {
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(450deg);
+  }
+}
+
+@keyframes rotate5 {
+  0% {
+    transform: rotate(120deg);
+  }
+  100% {
+    transform: rotate(480deg);
+  }
+}
+
+@keyframes rotate6 {
+  0% {
+    transform: rotate(150deg);
+  }
+  100% {
+    transform: rotate(510deg);
+  }
+}
+
+@keyframes rotate7 {
+  0% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(540deg);
+  }
+}
+
+@keyframes rotate8 {
+  0% {
+    transform: rotate(210deg);
+  }
+  100% {
+    transform: rotate(570deg);
+  }
+}
+
+@keyframes rotate9 {
+  0% {
+    transform: rotate(240deg);
+  }
+  100% {
+    transform: rotate(600deg);
+  }
+}
+
+@keyframes rotate10 {
+  0% {
+    transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(630deg);
+  }
+}
+
+@keyframes rotate11 {
+  0% {
+    transform: rotate(300deg);
+  }
+  100% {
+    transform: rotate(660deg);
+  }
+}
+
+@keyframes rotate12 {
+  0% {
+    transform: rotate(330deg);
+  }
+  100% {
+    transform: rotate(690deg);
+  }
+}
+
+@keyframes rotate13 {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(720deg);
+  }
+}
+
+.rotate-slow-1 {
+  animation: rotate1 60s linear infinite;
+}
+
+.rotate-slow-2 {
+  animation: rotate2 60s linear infinite;
+}
+
+.rotate-slow-3 {
+  animation: rotate3 60s linear infinite;
+}
+.rotate-slow-4 {
+  animation: rotate4 60s linear infinite;
+}
+.rotate-slow-5 {
+  animation: rotate5 60s linear infinite;
+}
+.rotate-slow-6 {
+  animation: rotate6 60s linear infinite;
+}
+.rotate-slow-7 {
+  animation: rotate7 60s linear infinite;
+}
+.rotate-slow-8 {
+  animation: rotate8 60s linear infinite;
+}
+.rotate-slow-9 {
+  animation: rotate9 60s linear infinite;
+}
+.rotate-slow-10 {
+  animation: rotate10 60s linear infinite;
+}
+.rotate-slow-11 {
+  animation: rotate11 60s linear infinite;
+}
+.rotate-slow-12 {
+  animation: rotate12 60s linear infinite;
+}
+.rotate-slow-13 {
+  animation: rotate13 60s linear infinite;
+}
 @layer base {
   body {
     @apply font-sans bg-n-8 text-n-1 text-base;

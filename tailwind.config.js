@@ -10,6 +10,45 @@ export default {
   ],
   theme: {
     extend: {
+      display: ['last'],
+      animation: {
+        'rotate-slow-1': 'rotate1 60s linear infinite',
+        'rotate-slow-2': 'rotate2 60s linear infinite',
+        'rotate-slow-3': 'rotate3 60s linear infinite',
+        'rotate-slow-4': 'rotate4 60s linear infinite',
+        'rotate-slow-5': 'rotate5 60s linear infinite',
+        'rotate-slow-6': 'rotate6 60s linear infinite',
+      },
+      transform: {
+        'rotate-0': 'rotate(0deg)',
+        'rotate-30': 'rotate(30deg)',
+        'rotate-60': 'rotate(60deg)',
+        'rotate-90': 'rotate(90deg)',
+        'rotate-120': 'rotate(120deg)',
+        'rotate-150': 'rotate(150deg)',
+        'rotate-180': 'rotate(180deg)',
+        'rotate-210': 'rotate(210deg)',
+        'rotate-240': 'rotate(240deg)',
+        'rotate-270': 'rotate(270deg)',
+        'rotate-300': 'rotate(300deg)',
+        'rotate-330': 'rotate(330deg)',
+        'rotate-360': 'rotate(360deg)',
+      },
+      backdropBlur: {
+        'xl': '32px',
+        '2xl': '64px',
+        '3xl': '96px',
+        '4xl': '128px',
+      },
+      borderRadius: {
+        'extra': '2rem',
+        'extra-xl': '3rem',
+        'extra-2xl': '4rem',
+        'extra-3xl': '5rem',
+      },
+      textShadow: {
+        DEFAULT: "0 0.0625rem 0.125rem rgba(0, 0, 0, 0.25)",
+      },
       transitionDuration: {
         DEFAULT: "200ms",
         1500: "1500ms",
