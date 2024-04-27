@@ -46,21 +46,21 @@ const Header = () => {
 
   return (
     <div
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-1000 max-lg:bg-n-8/50 max-lg:backdrop-blur-sm${
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-1000 max-lg:h-[5rem] max-lg:border max-lg:border-color-ivory max-lg:bg-n-8/50 max-lg:backdrop-blur-sm${
         openNavigation ? "bg-transparent" : "bg-transparent"
       } ${showNav ? "opacity-100 visible" : "opacity-0 invisible"}`}
     >
-      <div className="flex items-center px-5 lg:px-7.5 xl:px-20 max-lg:py-4">
-        <a className="w-[12rem] h-[4.5rem] lg:mx-5 xl:mr-8 pl-2 md:border md:rounded-extra-3xl md:border-color-ivory md:backdrop-blur-lg transition-all duration-1000  md:bg-n-8/30 box-sizing:border-box items-center justify-center" href="#hero">
+      <div className="flex items-center px-5 lg:px-7.5 xl:px-20 max-lg:py-1">
+        <a className="max-lg:py-2 max-lg:w-[9rem] w-[12rem] h-[4.5rem] lg:mx-5 xl:mr-8 pl-2 md:border md:rounded-extra-3xl md:border-color-ivory md:backdrop-blur-lg transition-all duration-1000  md:bg-n-8/30 box-sizing:border-box items-center justify-center" href="#hero">
           <img src={logocodesf2} width={160} height={30} alt="Logo CODESF" />
         </a>
 
         <nav
           className={`${
             openNavigation ? "flex" : "hidden"
-          } fixed top-[10rem] bottom-[10rem] left-0 right-0 lg:static lg:flex lg:mx-auto`}
+          } fixed top-[5rem] bottom-0 left-0 right-0 lg:static lg:flex lg:mx-auto backdrop-blur-lg`}
         >
-          <div className="relative z-2 flex flex-col items-center justify-center m-auto lg:flex-row border rounded-extra-3xl border-color-ivory my-4 bg-n-8/30 backdrop-blur-lg"> 
+          <div className="relative z-2 flex flex-col items-center justify-center m-auto lg:flex-row lg:border rounded-extra-3xl border-color-ivory my-4 lg:bg-n-8/30 lg:backdrop-blur-lg"> 
             {navigation.map((item, index) => (          
               <React.Fragment key={item.id} className="hidden lg:flex">
                 <a
@@ -77,7 +77,7 @@ const Header = () => {
                   {item.title} 
                 </a>
                 {index !== navigation.length - 1 && (
-                  <div className="h-10 w-px bg-gradient-to-b from-transparent via-color-ivory to-transparent last:hidden"></div>
+                  <div className="hidden lg:flex"><div className="h-10 w-px bg-gradient-to-b from-transparent via-color-ivory to-transparent last:hidden"></div></div>
                 )}
               </React.Fragment>
             ))}
@@ -93,7 +93,7 @@ const Header = () => {
         </div>
 
         <button
-          className="ml-auto lg:hidden"      
+          className="ml-auto lg:hidden pr-4"      
           onClick={toggleNavigation}
         >
           <MenuSvg openNavigation={openNavigation} />

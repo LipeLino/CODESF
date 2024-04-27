@@ -26,7 +26,7 @@ const Hero = () => {
       <div className="container relative" ref={parallaxRef}>
         <div className="relative z-1 max-w-[62rem] mx-auto text-center mb-[3.875rem] md:mb-20 lg:mb-[6.25rem]">
           <h1 className="h2 mb-6 sm:h1">
-            <div className="flex justify-center drop-shadow-2xl">
+            <div className="flex justify-center drop-shadow-2xl backdrop-blur-lg">
               <TypeWriterEffect
                 startDelay={100}
                 cursorColor="black"
@@ -34,18 +34,19 @@ const Hero = () => {
                 typeSpeed={100}
                 scrollArea={myAppRef}
                 hideCursorAfterText={true}
-                className="drop-shadow-2xl"
+                className="drop-shadow-2xl backdrop-blur-lg"
               />
             </div>
             <span className="inline-block relative">
-            <div className="flex justify-center drop-shadow-lg">
+            <div className="flex justify-center drop-shadow-lg backdrop-blur-lg">
               <TypeWriterEffect
-                startDelay={2700}
+                startDelay={3000}
                 cursorColor="black"
                 text="CODESF"
                 typeSpeed={200}
                 scrollArea={myAppRef}
                 hideCursorAfterText={true}
+                className="drop-shadow-lg bakdrop-blur-lg"
               />
             </div>
               <img

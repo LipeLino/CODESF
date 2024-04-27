@@ -134,7 +134,6 @@
     transform: rotate(720deg);
   }
 }
-
 .rotate-slow-1 {
   animation: rotate1 60s linear infinite;
 }
