@@ -1,3 +1,4 @@
+// eslint-disable-next-line react/prop-types
 const MenuSvg = ({ openNavigation }) => {
   return (
     <svg
@@ -12,7 +13,7 @@ const MenuSvg = ({ openNavigation }) => {
         width="20"
         height="2"
         rx="1"
-        fill="white"
+        fill="color-russianviolet"
         transform={`rotate(${openNavigation ? "45" : "0"})`}
       />
       <rect
@@ -21,7 +22,7 @@ const MenuSvg = ({ openNavigation }) => {
         width="20"
         height="2"
         rx="1"
-        fill="white"
+        fill="color-russianviolet"
         transform={`rotate(${openNavigation ? "-45" : "0"})`}
       />
     </svg>
