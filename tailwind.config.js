@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 import { fontFamily } from "tailwindcss/defaultTheme";
 import plugin from "tailwindcss/plugin";
+import defaultTheme from 'tailwindcss/defaultTheme';
 
 export default {
   content: [
@@ -9,6 +10,11 @@ export default {
     "./public/assets/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    screens: {
+      'xs': "320px",
+      'xs1':"360px",
+      ...defaultTheme.screens,
+    },
     extend: {
       display: ['last'],
       animation: {
@@ -147,6 +153,16 @@ export default {
     },
   },
   plugins: [
+    // eslint-disable-next-line no-undef
+    require('tailwindcss-pseudo-elements')({
+      customPseudoClasses: ['foo'],
+      customPseudoElements: ['bar'],
+      contentUtilities: false,
+      emptyContent: false,
+      classNameReplacer: {
+        'hover:before:text-black': 'hbt',
+      },
+    }),
     plugin(function ({ addBase, addComponents, addUtilities }) {
       addBase({});
       addComponents({
@@ -202,4 +218,14 @@ export default {
       });
     }),
   ],
+  variants: {
+    extend: {
+      backgroundImage: ['before', 'after'],
+      backgroundOpacity: ['before', 'after'],
+      backdropBlur: ['before', 'after'],
+      zIndex: ['before', 'after'],
+      inset: ['before', 'after'],
+      outer: ['before', 'after'],
+    },
+  },
 };

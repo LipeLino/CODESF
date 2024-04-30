@@ -56,7 +56,7 @@ export const navigation = [
     url: "#missao",
   },
   {
-    id: "5",
+    id: "4",
     title: "Entrar",
     url: "#login",
     onlyMobile: true,
