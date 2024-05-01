@@ -32,7 +32,16 @@
   --font-code: "Source Code Pro", monospace;
   --font-grotesk: "Space Grotesk", sans-serif;
   color-scheme: light;
-  background-color: #ffffed;
+}
+@layer utilities {
+  .pause {
+    animation-play-state: paused;
+  }
+}
+@layer base {
+  body {
+    @apply font-sans bg-color-lightcyan text-n-1 text-base;
+  }
 }
 
 * {
@@ -155,6 +164,54 @@
     transform: rotate(720deg);
   }
 }
+@keyframes rotate46 {
+  0% {
+    transform: rotate(46deg);
+  }
+  100% {
+    transform: rotate(406deg);
+  }
+}
+@keyframes rotate54 {
+  0% {
+    transform: rotate(54deg);
+  }
+  100% {
+    transform: rotate(414deg);
+  }
+}
+@keyframes rotate56 {
+  100% {
+    transform: rotate(-56deg);
+  }
+  0% {
+    transform: rotate(-416deg);
+  }
+}
+@keyframes rotate65 {
+  100% {
+    transform: rotate(-65deg);
+  }
+  0% {
+    transform: rotate(-425deg);
+  }
+}
+@keyframes rotate70 {
+  0% {
+    transform: rotate(70deg);
+  }
+  100% {
+    transform: rotate(430deg);
+  }
+}
+@keyframes rotate85 {
+  100% {
+    transform: rotate(-85deg);
+  }
+  0% {
+    transform: rotate(-445deg);
+  }
+}
 .rotate-slow-1 {
   animation: rotate1 60s linear infinite;
 }
@@ -195,11 +252,6 @@
 }
 .rotate-slow-13 {
   animation: rotate13 60s linear infinite;
-}
-@layer base {
-  body {
-    @apply font-sans bg-n-8 text-n-1 text-base;
-  }
 }
 
 .rotate-45 {

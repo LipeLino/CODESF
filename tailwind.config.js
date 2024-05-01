@@ -17,25 +17,63 @@ export default {
     },
     extend: {
       display: ['last'],
-      animation: {
-        'rotate-slow-1': 'rotate1 60s linear 3',
-        'rotate-slow-2': 'rotate2 60s linear 2',
-        'rotate-slow-3': 'rotate3 60s linear 3',
-        'rotate-slow-4': 'rotate4 60s linear 2',
-        'rotate-slow-5': 'rotate5 60s linear 3',
-        'rotate-slow-6': 'rotate6 60s linear 2',
-        'rotate-slow-7': 'rotate7 60s linear 3',
-        'rotate-slow-8': 'rotate8 60s linear 2',
-        'rotate-slow-9': 'rotate9 60s linear 3',
-        'rotate-slow-10': 'rotate10 60s linear 2',
-        'rotate-slow-11': 'rotate11 60s linear 3',
-        'rotate-slow-12': 'rotate12 60s linear 2',
-        'rotate-slow-13': 'rotate13 60s linear 3',
+      animationPlayState: {
+        'paused': 'paused',
       },
+      animation: {
+        'rotate-slow-1': 'rotate1 60s linear 2s 2',
+        'rotate-slow-2': 'rotate2 60s linear 2s 2',
+        'rotate-slow-3': 'rotate3 60s linear 2s 2',
+        'rotate-slow-4': 'rotate4 60s linear 2s 2',
+        'rotate-slow-5': 'rotate5 60s linear 2s 2',
+        'rotate-slow-6': 'rotate6 60s linear 2s 2',
+        'rotate-slow-7': 'rotate7 60s linear 2s 2',
+        'rotate-slow-8': 'rotate8 60s linear 2s 2',
+        'rotate-slow-9': 'rotate9 60s linear 2s 2',
+        'rotate-slow-10': 'rotate10 60s linear 2s 2',
+        'rotate-slow-11': 'rotate11 60s linear 2s 2',
+        'rotate-slow-12': 'rotate12 60s linear 2s 2',
+        'rotate-slow-13': 'rotate13 60s linear 2s 2',
+        'rotate-slow-46': 'rotate46 60s linear 2s 2',
+        'rotate-slow-54': 'rotate54 60s linear 2s 2',
+        'rotate-slow-56': 'rotate56 60s linear 2s 2',
+        'rotate-slow-65': 'rotate65 60s linear 2s 2',
+        'rotate-slow-70': 'rotate70 60s linear 2s 2',
+        'rotate-slow-85': 'rotate85 60s linear 2s 2',
+        'text':'text 5s ease infinite',
+        'infinite-scroll': 'infinite-scroll 25s linear infinite',
+        'infinite-scroll-slow': 'infinite-scroll-slow 50s linear infinite',
+      },
+      keyframes: {
+        'text': {
+            '0%, 100%': {
+               'background-size':'200% 200%',
+                'background-position': 'left center'
+            },
+            '50%': {
+               'background-size':'200% 200%',
+                'background-position': 'right center'
+            },            
+        },
+        'infinite-scroll': {
+          from: { transform: 'translateX(0)' },
+          to: { transform: 'translateX(-100%)' },
+        },
+        'infinite-scroll-slow': {
+          from: { transform: 'translateX(0)' },
+          to: { transform: 'translateX(-100%)' },
+        },
+      },      
       transform: {
         'rotate-0': 'rotate(0deg)',
         'rotate-30': 'rotate(30deg)',
+        'rotate-46': 'rotate(46deg)',
+        'rotate-54': 'rotate(54deg)',
+        'rotate-56': 'rotate(-56deg)',
         'rotate-60': 'rotate(60deg)',
+        'rotate-65': 'rotate(-65deg)',
+        'rotate-70': 'rotate(70deg)',
+        'rotate-85': 'rotate(-85deg)',
         'rotate-90': 'rotate(90deg)',
         'rotate-120': 'rotate(120deg)',
         'rotate-150': 'rotate(150deg)',
@@ -80,7 +118,7 @@ export default {
       },
       colors: {
         color: {
-          1: "#8AA39B",
+          1: "#00356B",
           2: "#FFC876",
           3: "#FF776F",
           4: "#7ADB78",
@@ -89,6 +127,10 @@ export default {
           cream: "#FDFDBE",
           ivory: "#FFFFED",
           russianviolet: "#191539",
+          feldgrau: "#5C6F68",
+          lightcyan: "#CDE9EA",
+          oxfordblue: "#002147",
+          yaleblue: "#00356B",
         },
         stroke: {
           1: "#26242C",
@@ -108,6 +150,11 @@ export default {
           12: "#2E2A41",
           13: "#6C7275",
         },
+        codesf: {
+          amarelo: "#F6E529",
+          verde: "#009A57",
+          azul: "#303558"
+        }
       },
       fontFamily: {
         sans: ["var(--font-sora)", ...fontFamily.sans],
