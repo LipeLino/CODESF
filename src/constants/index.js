@@ -31,7 +31,6 @@ import {
   telegram,
   twitter,
   yourlogo,
-  logocodesfblank,
 } from "../assets";
 
 export const navigation = [
@@ -64,8 +63,6 @@ export const navigation = [
 ];
 
 export const heroIcons = [homeSmile, file02, searchMd, plusSquare];
-
-export const notificationImages = [logocodesfblank];
 
 export const companyLogos = [yourlogo, yourlogo, yourlogo, yourlogo, yourlogo];
 
@@ -236,8 +233,8 @@ export const pricing = [
 export const benefits = [
   {
     id: "0",
-    title: "Ask anything",
-    text: "Lets users quickly find answers to their questions without having to search through multiple sources.",
+    title: "Atração de Investimentos",
+    text: "Potencializando negócios e recursos para o crescimento econômico de Frutal.",
     backgroundUrl: "./src/assets/benefits/card-1.svg",
     iconUrl: benefitIcon1,
     imageUrl: benefitImage2,
@@ -245,8 +242,8 @@ export const benefits = [
   },
   {
     id: "1",
-    title: "Improve everyday",
-    text: "The app uses natural language processing to understand user queries and provide accurate and relevant responses.",
+    title: "Desenvolvimento Urbano",
+    text: "Desenhando o futuro de Frutal: uma cidade mais verde, inteligente e conectada.",
     backgroundUrl: "./src/assets/benefits/card-2.svg",
     iconUrl: benefitIcon2,
     imageUrl: benefitImage2,
@@ -254,8 +251,8 @@ export const benefits = [
   },
   {
     id: "2",
-    title: "Connect everywhere",
-    text: "Connect with the AI chatbot from anywhere, on any device, making it more accessible and convenient.",
+    title: "Meio Ambiente e Saneamento Básico",
+    text: "Sustentabilidade ambiental: construindo um futuro em harmonia com a natureza.",
     backgroundUrl: "./src/assets/benefits/card-3.svg",
     iconUrl: benefitIcon3,
     imageUrl: benefitImage2,
@@ -263,8 +260,8 @@ export const benefits = [
   },
   {
     id: "3",
-    title: "Fast responding",
-    text: "Lets users quickly find answers to their questions without having to search through multiple sources.",
+    title: "Matrizes Energéticas",
+    text: "Energia para o futuro: garantindo o fornecimento de energia limpa, confiável e acessível para as necessidades da região.",
     backgroundUrl: "./src/assets/benefits/card-4.svg",
     iconUrl: benefitIcon4,
     imageUrl: benefitImage2,
@@ -272,8 +269,8 @@ export const benefits = [
   },
   {
     id: "4",
-    title: "Ask anything",
-    text: "Lets users quickly find answers to their questions without having to search through multiple sources.",
+    title: "Ciência, Tecnologia e Inovação:",
+    text: "Os pilares do desenvolvimento, gerando novos produtos, serviços e soluções para os desafios da sociedade.",
     backgroundUrl: "./src/assets/benefits/card-5.svg",
     iconUrl: benefitIcon1,
     imageUrl: benefitImage2,
@@ -281,8 +278,8 @@ export const benefits = [
   },
   {
     id: "5",
-    title: "Improve everyday",
-    text: "The app uses natural language processing to understand user queries and provide accurate and relevant responses.",
+    title: "Saúde",
+    text: "Bem-estar e qualidade de vida: investindo em ações de promoção da saúde, prevenção de doenças e atenção à saúde integral. Com gestão eficiente e planejamento consciente.",
     backgroundUrl: "./src/assets/benefits/card-6.svg",
     iconUrl: benefitIcon2,
     imageUrl: benefitImage2,

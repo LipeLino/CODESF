@@ -1,4 +1,4 @@
-import { curve, frutal, heroBackground } from "../assets";
+import { curve, frutal } from "../assets";
 import Button from "./Button";
 import Section from "./Section";
 import { BackgroundCircles, BottomLine, Gradient } from "./design/Hero";
@@ -17,7 +17,7 @@ const Hero = () => {
 
   return (
     <Section
-      className="pt-[14.5rem] -mt-[5.25rem]"
+      className="pt-[14.6rem] -mt-[5.25rem]"
       crosses
       crossesOffset="lg:translate-y-[116.5rem]"
       customPaddings
@@ -25,8 +25,9 @@ const Hero = () => {
     >
       <div className="container relative" ref={parallaxRef}>
         <div className="relative z-1 max-w-[62rem] mx-auto text-center mb-[3.875rem] md:mb-20 lg:mb-[6.25rem]">
-          <h1 className="h5 mb-10 sm:h1 max-xs1:text-xl">
-            <div className="flex justify-center drop-shadow-2xl backdrop-blur-lg">
+          <h1 className="h5 mb-10 sm:h1 max-xs1:text-xl lg:text-6xl backdrop-blur-sm drop-shadow-2xl ">
+            <div className="pb-5 flex justify-center drop-shadow-2xl bakdrop-blur-sm bg-gradient-to-r bg-clip-text  text-transparent 
+            from-color-russianviolet via-color-yaleblue to-color-russianviolet animate-text">
               <TypeWriterEffect
                 startDelay={100}
                 cursorColor="white"
@@ -34,36 +35,35 @@ const Hero = () => {
                 typeSpeed={100}
                 scrollArea={myAppRef}
                 hideCursorAfterText={true}
-                className="drop-shadow-2xl"
               />
             </div>
             <span className="inline-block relative">
-              <div className="flex justify-center drop-shadow-lg backdrop-blur-lg">
+              <div className="flex justify-center drop-shadow-2xl bakdrop-blur-sm bg-gradient-to-r bg-clip-text  text-transparent 
+            from-color-russianviolet via-color-yaleblue to-color-russianviolet animate-text">
                 <TypeWriterEffect
-                  startDelay={3000}
+                  startDelay={3200}
                   cursorColor="white"
                   text="CODESF"
                   typeSpeed={200}
                   scrollArea={myAppRef}
                   hideCursorAfterText={true}
-                  className="drop-shadow-lg bakdrop-blur-lg"
                 />
               </div>
               <img
                 src={curve}
-                className="absolute top-full left-0 w-full xl:-mt-2"
+                className="absolute top-full left-0 w-full xl:-mt-2 pt-2"
                 width={624}
                 height={28}
                 alt="Curve"
               />
             </span>
           </h1>
-          <p className="body-1 max-w-3xl mx-auto mb-6 text-n-2 lg:mb-8 drop-shadow-2xl max-lg:text-center">
+          <p className="body-1 max-w-3xl mx-auto mb-6 text-n-2 lg:mb-8 drop-shadow-2xl backdrop-blur-sm max-lg:text-center">
             O CODESF reúne diversos setores da sociedade para impulsionar o
             desenvolvimento sustentável de Frutal, visando torná-la uma cidade
             moderna, acolhedora e próspera.
           </p>
-          <Button href="/pricing" white>
+          <Button href="#organizacao" white>
             SOBRE O CODESF
           </Button>
         </div>
@@ -104,23 +104,15 @@ const Hero = () => {
 
             <Gradient />
           </div>
-          <div className="absolute sm:-mt-22 -top-[108%] left-1/2 h-[260%] w-[234%] -translate-x-1/2 xs:-mt-36 xs:h-[320%] xs1:-mt-24 md:-top-[104%] md:w-[138%] lg:-top-[107%] lg:h-[332%]">
-            <img
-              src={heroBackground}
-              className="w-full h-full"
-              width={1440}
-              height={1800}
-              alt="hero"
-            />
-          </div>
 
           <BackgroundCircles className="animate-rotate-slow" />
         </div>
 
-        <CompanyLogos className="hidden relative z-10 mt-20 lg:block" />
+        <CompanyLogos className="hidden relative z-10 mt-20 lg:block backdrop-blur-sm drop-shadow-2xl overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)] group" />
       </div>
 
       <BottomLine />
+
     </Section>
   );
 };
