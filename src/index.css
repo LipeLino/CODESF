@@ -6,6 +6,23 @@
 @tailwind components;
 @tailwind utilities;
 
+.border-gradient-r {
+  position: relative;
+  border: transparent;
+}
+
+.border-gradient-r::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to right, russianviolet, yaleblue, russianviolet);
+  z-index: -1;
+  border-radius: inherit;
+  clip-path: inset(0 0 0 2px);
+}
 .backdrop-hack {
   @apply absolute inset-0 -z-1 bg-transparent;
 }

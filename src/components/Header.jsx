@@ -76,16 +76,17 @@ const Header = () => {
                   className={`block relative font-code text-2xl font-semibold uppercase text-n-1 transition-colors hover:text-color-1 ${item.onlyMobile ? "lg:hidden" : ""
                     } px-6 py-6 md:py-8 lg:-mr-0.25 lg:text-base lg:font-semibold ${item.url === pathname.hash
                       ? "z-2 lg:text-n-1"
-                      : "lg:text-n-1/60"
+                      : "lg:text-n-1/70"
                     } lg:leading-none lg:hover:text-n-1 xl:px-12 `}
                 >
                   {item.title}
+
                 </a>
-                {(index === 0 || index === 1 || index === 2) && (
+                {index < 3 && (
                   <div className="max-lg:hidden"><div className="h-10 w-px bg-gradient-to-b from-transparent via-color-ivory to-transparent"></div></div>
                 )}
-                {(index === 0 || index === 1 || index === 2) && (
-                  <div className="hidden"><div className="h-10 w-px bg-gradient-to-b from-transparent via-color-ivory to-transparent"></div></div>
+                {index < 3 && (
+                  <div className="max-lg:hidden opacity-0"><div className="h-10 w-px bg-gradient-to-b from-transparent via-color-ivory to-transparent"></div></div>
                 )}
               </React.Fragment>
             ))}

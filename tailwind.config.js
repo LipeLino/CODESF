@@ -16,6 +16,7 @@ export default {
       ...defaultTheme.screens,
     },
     extend: {
+      borderGradient: true,
       display: ['last'],
       animationPlayState: {
         'paused': 'paused',
@@ -131,6 +132,10 @@ export default {
           lightcyan: "#CDE9EA",
           oxfordblue: "#002147",
           yaleblue: "#00356B",
+          flax: "#F5EE9C",
+          cream: "#FDFDBE",
+          celadon: "#ABD9BF",
+          mint: "#BCE1D5",
         },
         stroke: {
           1: "#26242C",
@@ -139,7 +144,7 @@ export default {
           1: "#191539",
           2: "#101D38",
           3: "#ADA8C3",
-          4: "#757185",
+          4: "#0B3552",
           5: "#3F3A52",
           6: "#252134",
           7: "#15131D",
