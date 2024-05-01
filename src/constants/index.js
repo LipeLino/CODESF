@@ -3,7 +3,20 @@ import {
   benefitIcon2,
   benefitIcon3,
   benefitIcon4,
+  benefitIcon5,
+  benefitIcon6,
+  benefitCard1,
+  benefitCard2,
+  benefitCard3,
+  benefitCard4,
+  benefitCard5,
+  benefitCard6,
+  benefitImage1,
   benefitImage2,
+  benefitImage3,
+  benefitImage4,
+  benefitImage5,
+  benefitImage6,
   chromecast,
   disc02,
   discord,
@@ -116,22 +129,33 @@ export const roadmap = [
   },
 ];
 
-export const collabText =
-  "With smart automation and top-notch security, it's the perfect solution for teams looking to work smarter.";
+export const collabText1 =
+  "Contribuir, através da cooperação, da inovação e do empreendedorismo, com o desenvolvimento econômico e sustentável de Frutal.";
+
+export const collabText2 =
+  "Frutal como um município próspero, sustentável e com alta qualidade de vida para todos os seus habitantes.";
+
+export const collabText3 =
+  "Sustentabilidade, inovação, colaboração, transparência, resiliência e excelência - guiam a missão de promover um futuro equilibrado e próspero para Frutal.";
+
+export const collabText4 =
+  "O CODESF, entidade sem fins lucrativos, tem a missão de promover, incentivar, e acompanhar planos, programas e projetos voltados para o desenvolvimento da cidade de Frutal.";
 
 export const collabContent = [
   {
     id: "0",
-    title: "Seamless Integration",
-    text: collabText,
+    title: "Missão",
+    text: collabText1,
   },
   {
     id: "1",
-    title: "Smart Automation",
+    title: "Visão",
+    text: collabText2,
   },
   {
     id: "2",
-    title: "Top-notch Security",
+    title: "Valores",
+    text: collabText3,
   },
 ];
 
@@ -235,16 +259,16 @@ export const benefits = [
     id: "0",
     title: "Atração de Investimentos",
     text: "Potencializando negócios e recursos para o crescimento econômico de Frutal.",
-    backgroundUrl: "./src/assets/benefits/card-1.svg",
+    backgroundUrl: benefitCard1, 
     iconUrl: benefitIcon1,
-    imageUrl: benefitImage2,
+    imageUrl: benefitImage1,
     light: true,
   },
   {
     id: "1",
     title: "Desenvolvimento Urbano",
     text: "Desenhando o futuro de Frutal: uma cidade mais verde, inteligente e conectada.",
-    backgroundUrl: "./src/assets/benefits/card-2.svg",
+    backgroundUrl: benefitCard2,
     iconUrl: benefitIcon2,
     imageUrl: benefitImage2,
     light: true,
@@ -253,36 +277,36 @@ export const benefits = [
     id: "2",
     title: "Meio Ambiente e Saneamento Básico",
     text: "Sustentabilidade ambiental: construindo um futuro em harmonia com a natureza.",
-    backgroundUrl: "./src/assets/benefits/card-3.svg",
+    backgroundUrl: benefitCard3,
     iconUrl: benefitIcon3,
-    imageUrl: benefitImage2,
+    imageUrl: benefitImage3,
     light: true,
   },
   {
     id: "3",
     title: "Matrizes Energéticas",
     text: "Energia para o futuro: garantindo o fornecimento de energia limpa, confiável e acessível para as necessidades da região.",
-    backgroundUrl: "./src/assets/benefits/card-4.svg",
+    backgroundUrl: benefitCard4,
     iconUrl: benefitIcon4,
-    imageUrl: benefitImage2,
+    imageUrl: benefitImage4,
     light: true,
   },
   {
     id: "4",
     title: "Ciência, Tecnologia e Inovação:",
     text: "Os pilares do desenvolvimento, gerando novos produtos, serviços e soluções para os desafios da sociedade.",
-    backgroundUrl: "./src/assets/benefits/card-5.svg",
-    iconUrl: benefitIcon1,
-    imageUrl: benefitImage2,
+    backgroundUrl: benefitCard5,
+    iconUrl: benefitIcon5,
+    imageUrl: benefitImage5,
     light: true,
   },
   {
     id: "5",
     title: "Saúde",
-    text: "Bem-estar e qualidade de vida: investindo em ações de promoção da saúde, prevenção de doenças e atenção à saúde integral. Com gestão eficiente e planejamento consciente.",
-    backgroundUrl: "./src/assets/benefits/card-6.svg",
-    iconUrl: benefitIcon2,
-    imageUrl: benefitImage2,
+    text: "Bem-estar e qualidade de vida: investindo em ações de promoção da saúde, prevenção de doenças e saúde integral. Com gestão eficiente e planejamento consciente.",
+    backgroundUrl: benefitCard6,
+    iconUrl: benefitIcon6,
+    imageUrl: benefitImage6,
     light: true,
   },
 ];
