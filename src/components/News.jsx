@@ -28,8 +28,8 @@ const News = () => {
         </div>
 
         <Heading
-          tag="Get started with Brainwave"
-          title="Pay once, use forever"
+          tag="A Voz de Frutal"
+          title="CODESF em Destaque"
         />
 
         <div className="relative">
@@ -43,7 +43,7 @@ const News = () => {
             className="text-xs font-code font-bold tracking-wider uppercase border-b"
             href="/News"
           >
-            See the full details
+            Leia na Íntegra
           </a>
         </div>
       </div>
