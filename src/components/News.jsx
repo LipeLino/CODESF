@@ -1,10 +1,10 @@
 import Section from "./Section";
 import { smallSphere, stars } from "../assets";
 import Heading from "./Heading";
-import PricingList from "./PricingList";
-import { LeftLine, RightLine } from "./design/Pricing";
+import NewsList from "./NewsList";
+import { LeftLine, RightLine } from "./design/News";
 
-const Pricing = () => {
+const News = () => {
   return (
     <Section className="overflow-hidden" id="news">
       <div className="container relative z-2">
@@ -33,7 +33,7 @@ const Pricing = () => {
         />
 
         <div className="relative">
-          <PricingList />
+          <NewsList />
           <LeftLine />
           <RightLine />
         </div>
@@ -41,7 +41,7 @@ const Pricing = () => {
         <div className="flex justify-center mt-10">
           <a
             className="text-xs font-code font-bold tracking-wider uppercase border-b"
-            href="/pricing"
+            href="/News"
           >
             See the full details
           </a>
@@ -51,4 +51,4 @@ const Pricing = () => {
   );
 };
 
-export default Pricing;
+export default News;

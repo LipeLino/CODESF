@@ -5,7 +5,7 @@ import '../index.css'
 const CompanyLogos = ({ className }) => {
   return (
     <div className={className}>
-      <h5 className="tagline text-2xl mb-6 text-center text-n-1/80 backdrop-blur-sm drop-shadow-2xl">
+      <h5 className="tagline text-2xl mb-6 text-center text-n-1/80 backdrop-blur-sm text-shadow">
         DESENVOLVENDO FRUTAL COM O APOIO DE:
       </h5>
       <ul className="flex">

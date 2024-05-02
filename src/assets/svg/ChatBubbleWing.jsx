@@ -5,6 +5,7 @@ const ChatBubbleWing = ({ className, pathClassName }) => {
       xmlns="http://www.w3.org/2000/svg"
       width="26"
       height="37"
+      fill="#151939"
     >
       <path
         className={`${pathClassName || ""}`}

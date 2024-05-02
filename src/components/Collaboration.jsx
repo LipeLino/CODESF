@@ -3,10 +3,9 @@ import { collabApps, collabContent, collabText1, collabText2, collabText3, colla
 import Button from "./Button";
 import Section from "./Section";
 import { LeftCurve, RightCurve } from "./design/Collaboration";
-import { useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import '../index.css';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -48,7 +47,7 @@ const Collaboration = () => {
     <Section crosses>
       <div className="container lg:flex">
         <div className="max-w-[38rem]">
-          <h2 className="h3 mb-4 md:mb-8 drop-shadow-2xl bakdrop-blur-sm bg-gradient-to-r bg-clip-text  text-transparent 
+          <h2 className="h6 lg:h3 mb-4 md:mb-8 text-shadow bakdrop-blur-sm bg-gradient-to-r bg-clip-text  text-transparent 
             from-color-russianviolet via-color-yaleblue to-color-russianviolet animate-text">
             Conselho de Desenvolvimento Econômico e Sustentável de Frutal
           </h2>
@@ -58,7 +57,7 @@ const Collaboration = () => {
               <li className="mb-2 py-4" key={item.id}>
                 <div className="flex items-center" ref={el => titleRefs.current[index] = el}>
                   <img src={check} width={24} height={24} alt="check" />
-                  <h6 className="py-2 font-semibold body-2 ml-5 drop-shadow-2xl bakdrop-blur-sm bg-gradient-to-r bg-clip-text  text-transparent 
+                  <h6 className="py-2 font-semibold body-2 ml-5 text-shadow bakdrop-blur-sm bg-gradient-to-r bg-clip-text  text-transparent 
   from-color-russianviolet via-color-yaleblue to-color-russianviolet animate-text">{item.title}</h6>
                 </div>
                 {item.text && (
@@ -67,19 +66,20 @@ const Collaboration = () => {
               </li>
             ))}
           </ul>
-
-          <Button href="#news" className="border-gradient-r">Notícias</Button>
+          <div className="max-lg:max-w-[38rem] max-lg:flex max-lg:justify-center">
+            <Button href="#news" className="max-lg:mb-8 block">Notícias</Button>
+          </div>
         </div>
 
         <div className="lg:ml-auto xl:w-[38rem] mt-4">
-          <p className="body-2 mb-8 text-n-4 md:mb-16 lg:mb-32 lg:w-[26rem] lg:mx-auto">
+          <p className="body-2 max-lg:pb-16 mb-8 text-n-4 md:mb-16 lg:mb-32 lg:w-[26rem] lg:mx-auto">
             {collabText4}
           </p>
 
           <div className="relative left-1/2 flex w-[22rem] aspect-square border border-n-6 rounded-full -translate-x-1/2 scale:75 md:scale-100">
             <div className="flex w-60 aspect-square m-auto border border-n-6 rounded-full">
               <div className="w-[6rem] aspect-square m-auto p-[0.2rem] bg-conic-gradient rounded-full">
-                <div className="flex items-center justify-center w-full h-full bg-n-8 rounded-full">
+                <div className="flex items-center justify-center w-full h-full bg-color-ivory rounded-full">
                   <img
                     src={logo}
                     width={48}
@@ -94,12 +94,10 @@ const Collaboration = () => {
               {collabApps.map((app, index) => (
                 <li
                   key={app.id}
-                  className={`absolute top-0 left-1/2 h-1/2 -ml-[1.6rem] origin-bottom rotate-${index * 45
-                    }`}
+                  className={`group absolute top-0 left-1/2 h-1/2 -ml-[1.6rem] origin-bottom rotate-${index * 45}`}
                 >
                   <div
-                    className={`relative -top-[1.6rem] flex w-[3.2rem] h-[3.2rem] bg-n-7 border border-n-1/15 rounded-xl -rotate-${index * 45
-                      }`}
+                    className={`relative items-center justify-center max-lg:top-[1.6rem]  max-lg:w-[3.2rem] max-lg:h-[3.2rem] -top-[1.7rem] flex w-[3.4rem] h-[3.4rem] bg-color-russianviolet border border-color-ivory rounded-xl -rotate-${index * 45}`}
                   >
                     <img
                       className="m-auto"
@@ -108,6 +106,9 @@ const Collaboration = () => {
                       alt={app.title}
                       src={app.icon}
                     />
+                    <div className="absolute -top-10 bg-color-ivory/60 background-blur-lg p-2 rounded-2xl text-n-1 text-sm font-semibold whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200 scale-0 group-hover:scale-100 animate-bounce">
+                      {app.title}
+                    </div>
                   </div>
                 </li>
               ))}
