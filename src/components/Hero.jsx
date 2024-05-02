@@ -25,8 +25,8 @@ const Hero = () => {
     >
       <div className="container relative" ref={parallaxRef}>
         <div className="relative z-1 max-w-[62rem] mx-auto text-center mb-[3.875rem] md:mb-20 lg:mb-[6.25rem]">
-          <h1 className="h5 mb-10 sm:h1 max-xs1:text-xl lg:text-6xl backdrop-blur-sm drop-shadow-2xl ">
-            <div className="pb-5 flex justify-center drop-shadow-2xl bakdrop-blur-sm bg-gradient-to-r bg-clip-text  text-transparent 
+          <h1 className="h5 mb-10 sm:h1 max-xs1:text-xl lg:text-6xl backdrop-blur-sm text-shadow ">
+            <div className="pb-5 flex justify-center text-shadow bakdrop-blur-sm bg-gradient-to-r bg-clip-text  text-transparent 
             from-color-russianviolet via-color-yaleblue to-color-russianviolet animate-text">
               <TypeWriterEffect
                 startDelay={100}
@@ -38,7 +38,7 @@ const Hero = () => {
               />
             </div>
             <span className="inline-block relative">
-              <div className="flex justify-center drop-shadow-2xl bakdrop-blur-sm bg-gradient-to-r bg-clip-text  text-transparent 
+              <div className="flex justify-center text-shadow bakdrop-blur-sm bg-gradient-to-r bg-clip-text  text-transparent 
             from-color-russianviolet via-color-yaleblue to-color-russianviolet animate-text">
                 <TypeWriterEffect
                   startDelay={3200}
@@ -58,7 +58,7 @@ const Hero = () => {
               />
             </span>
           </h1>
-          <p className="body-1 max-w-3xl mx-auto mb-6 text-n-2 lg:mb-8 drop-shadow-2xl backdrop-blur-sm max-lg:text-center">
+          <p className="body-1 max-w-3xl mx-auto mb-6 text-n-2 lg:mb-8 text-shadow backdrop-blur-sm max-lg:text-center">
             O CODESF reúne diversos setores da sociedade para impulsionar o
             desenvolvimento sustentável de Frutal, visando torná-la uma cidade
             moderna, acolhedora e próspera.
@@ -108,7 +108,7 @@ const Hero = () => {
           <BackgroundCircles className="animate-rotate-slow" />
         </div>
 
-        <CompanyLogos className="hidden relative z-10 mt-20 lg:block backdrop-blur-sm drop-shadow-2xl overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)] group" />
+        <CompanyLogos className="hidden relative z-10 mt-20 lg:block backdrop-blur-sm text-shadow overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)] group" />
       </div>
 
       <BottomLine />

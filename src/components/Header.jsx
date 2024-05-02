@@ -56,7 +56,7 @@ const Header = () => {
         <a className="group flex justify-start py-1 max-lg:w-[9rem] w-[12rem] h-[4rem] px-5 pl-2 lg:border lg:rounded-extra-3xl lg:border-color-ivory lg:backdrop-blur-lg transition-all duration-1000 lg:bg-n-8/30 box-sizing:border-box" href="#hero">
           <img src={logo} alt="Logo CODESF" className="w-auto h-full object-contain" />
           <div className="px-2 flex items-center justify-center">
-            <p className="text-center text-2xl font-semibold
+            <p className="text-center text-2xl font-semibold text-shadow
             bg-gradient-to-r bg-clip-text  text-transparent from-color-russianviolet via-color-yaleblue to-color-russianviolet group-hover:from-codesf-verde group-hover:via-codesf-amarelo group-hover:to-codesf-azul to-90% animate-text">
               CODESF
             </p>
@@ -69,26 +69,24 @@ const Header = () => {
           <div className="lg:hidden empty-content backdrop-hack outer"></div>
           <div className="lg:backdrop-blur-lg relative lg:h-[4rem] z-2 flex flex-col items-center justify-center m-auto lg:flex-row lg:border rounded-extra-3xl border-color-ivory my-4 lg:bg-n-8/30">
             {navigation.map((item, index) => (
-              <React.Fragment key={item.id}>
-                <a
-                  href={item.url}
-                  onClick={handleClick}
-                  className={`block relative font-code text-2xl font-semibold uppercase text-n-1 transition-colors hover:text-color-1 ${item.onlyMobile ? "lg:hidden" : ""
-                    } px-6 py-6 md:py-8 lg:-mr-0.25 lg:text-base lg:font-semibold ${item.url === pathname.hash
-                      ? "z-2 lg:text-n-1"
-                      : "lg:text-n-1/70"
-                    } lg:leading-none lg:hover:text-n-1 xl:px-12 `}
-                >
-                  {item.title}
-
-                </a>
-                {index < 3 && (
-                  <div className="max-lg:hidden"><div className="h-10 w-px bg-gradient-to-b from-transparent via-color-ivory to-transparent"></div></div>
-                )}
-                {index < 3 && (
-                  <div className="max-lg:hidden opacity-0"><div className="h-10 w-px bg-gradient-to-b from-transparent via-color-ivory to-transparent"></div></div>
-                )}
-              </React.Fragment>
+              <div key={item.id}>
+                <div className="flex items-center"> {/* Add a parent div to contain both item.title and the div */}
+                  <a
+                    href={item.url}
+                    onClick={handleClick}
+                    className={`block relative font-code text-2xl font-semibold uppercase text-n-1 transition-colors hover:text-color-1 ${item.onlyMobile ? "lg:hidden" : ""
+                      } px-6 py-6 md:py-8 lg:-mr-0.25 lg:text-base lg:font-semibold ${item.url === pathname.hash
+                        ? "z-2 lg:text-n-1"
+                        : "lg:text-n-1/70"
+                      } lg:leading-none lg:hover:text-n-1 xl:px-12 `}
+                  >
+                    {item.title}
+                  </a>
+                  {(index !== 3 && index !== 4) && (
+                    <div className="max-lg:hidden"><div className="h-10 w-px bg-gradient-to-b from-transparent via-color-ivory to-transparent"></div></div>
+                  )}
+                </div>
+              </div>
             ))}
           </div>
           <HamburgerMenu />

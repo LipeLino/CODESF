@@ -10,7 +10,7 @@ const Benefits = () => {
     <Section id="organizacao">
       <div className="container relative z-2">
         <Heading
-          className="md:max-w-md lg:max-w-3xl max-lg:text-center h1 drop-shadow-2xl bakdrop-blur-sm bg-gradient-to-r bg-clip-text  text-transparent 
+          className="md:max-w-md lg:max-w-3xl max-lg:text-center h1 text-shadow bakdrop-blur-sm bg-gradient-to-r bg-clip-text  text-transparent 
           from-color-russianviolet via-color-yaleblue to-color-russianviolet animate-text"
           title="Crescimento e Prosperidade, Nossa Prioridade"
         />
@@ -21,7 +21,7 @@ const Benefits = () => {
           />
         </div>
 
-        <div className="flex flex-wrap gap-10 mb-10 justify-between">
+        <div className="flex flex-wrap gap-5 mb-10 justify-between">
           {benefits.slice(0, 3).map((item) => (
             <div
               className="group block relative p-0.5 bg-no-repeat bg-[length:100%_100%] md:max-w-[24rem]"
@@ -32,7 +32,7 @@ const Benefits = () => {
             >
               <div className="relative z-2 flex flex-col min-h-[22rem] p-[2.4rem] pointer-events-none">
                 <h5 className="h5 mb-5 font-bold backdro-blur-md">{item.title}</h5>
-                <p className="group-hover:font-semibold body-2 mb-6 text-color-russianviolet drop-shadow-2xl backdro-blur-md">{item.text}</p>
+                <p className="group-hover:font-semibold body-2 mb-6 text-color-russianviolet text-shadow backdro-blur-md">{item.text}</p>
                 <div className="flex items-center mt-auto">
                   <img
                     src={item.iconUrl}
@@ -72,13 +72,13 @@ const Benefits = () => {
 
         <div className="w-full justify-center mt-20 hidden lg:flex">
           <Heading
-            className="md:max-w-md lg:max-w-3xl max-lg:text-center h1 drop-shadow-2xl bakdrop-blur-sm bg-gradient-to-r bg-clip-text  text-transparent 
+            className="md:max-w-md lg:max-w-3xl max-lg:text-center h1 text-shadow bakdrop-blur-sm bg-gradient-to-r bg-clip-text  text-transparent 
             from-color-russianviolet via-color-yaleblue to-color-russianviolet animate-text"
             title="6 Câmaras Técnicas"
           />
         </div>
 
-        <div className="flex flex-wrap gap-10 mb-10 justify-between">
+        <div className="flex flex-wrap gap-5 mb-10 justify-between">
           {benefits.slice(3).map((item) => (
             <div
               className="group block relative p-0.5 bg-no-repeat bg-[length:100%_100%] md:max-w-[24rem]"
@@ -89,7 +89,7 @@ const Benefits = () => {
             >
               <div className="relative z-2 flex flex-col min-h-[22rem] p-[2.4rem] pointer-events-none">
                 <h5 className="h5 mb-5 backdro-blur-md font-bold">{item.title}</h5>
-                <p className="group-hover:font-semibold body-2 mb-6 text-color-russianviolet backdro-blur-md drop-shadow-2xl">{item.text}</p>
+                <p className="group-hover:font-semibold body-2 mb-6 text-color-russianviolet backdro-blur-md text-shadow">{item.text}</p>
                 <div className="flex items-center mt-auto">
                   <img
                     src={item.iconUrl}

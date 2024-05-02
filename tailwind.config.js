@@ -16,6 +16,11 @@ export default {
       ...defaultTheme.screens,
     },
     extend: {
+      textShadow: {
+        sm: '0 1px 2px var(--tw-shadow-color)',
+        DEFAULT: '0 2px 4px var(--tw-shadow-color)',
+        lg: '0 8px 16px var(--tw-shadow-color)',
+      },
       borderGradient: true,
       display: ['last'],
       animationPlayState: {
@@ -44,6 +49,8 @@ export default {
         'text':'text 5s ease infinite',
         'infinite-scroll': 'infinite-scroll 25s linear infinite',
         'infinite-scroll-slow': 'infinite-scroll-slow 50s linear infinite',
+        bounce: 'bounce 2s infinite',
+        bounce2: 'bounce2 5s infinite',
       },
       keyframes: {
         'text': {
@@ -55,6 +62,14 @@ export default {
                'background-size':'200% 200%',
                 'background-position': 'right center'
             },            
+        },
+        bounce: {
+          '0%, 100%': { transform: 'translateY(-10%)' },
+          '50%': { transform: 'translateY(-15%)' },
+        },
+        bounce2: {
+          '0%, 100%': { transform: 'translateY(-10%)' },
+          '50%': { transform: 'translateY(-30%)' },
         },
         'infinite-scroll': {
           from: { transform: 'translateX(0)' },
@@ -206,6 +221,16 @@ export default {
   },
   plugins: [
     // eslint-disable-next-line no-undef
+    plugin(function ({ matchUtilities, theme }) {
+      matchUtilities(
+        {
+          'text-shadow': (value) => ({
+            textShadow: value,
+          }),
+        },
+        { values: theme('textShadow') }
+      )
+    }),
     require('tailwindcss-pseudo-elements')({
       customPseudoClasses: ['foo'],
       customPseudoElements: ['bar'],
