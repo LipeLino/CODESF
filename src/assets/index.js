@@ -28,6 +28,7 @@ import background from "./background.jpg";
 import curve from "./hero/curve.png";
 import frutal from "./hero/frutal.jpg";
 import heroBackground from "./hero/hero-background.jpg";
+import gradientblue from "./hero/gradientblue.svg";
 
 import curve1 from "./collaboration/curve-1.svg";
 import curve2 from "./collaboration/curve-2.svg";
@@ -87,6 +88,7 @@ import telegram from "./socials/telegram.svg";
 import twitter from "./socials/twitter.svg";
 
 export {
+  gradientblue,
   logo,
   logocodesf1,
   logocodesf2,

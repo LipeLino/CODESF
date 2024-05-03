@@ -1,4 +1,4 @@
-import { curve, frutal } from "../assets";
+import { curve, frutal, gradientblue } from "../assets";
 import Button from "./Button";
 import Section from "./Section";
 import { BackgroundCircles, BottomLine, Gradient } from "./design/Hero";
@@ -26,6 +26,11 @@ const Hero = () => {
     >
       <div className="container relative" ref={parallaxRef}>
         <div className="relative z-1 max-w-[62rem] mx-auto text-center mb-[3.875rem] md:mb-20 lg:mb-[6.25rem]">
+        <img
+              src={gradientblue}
+              className="absolute -top-10 w-full h-[14rem] object-cover opacity-80 blur-3xl rounded-extra-3xl"
+              alt="Gradient Background"
+            />
           <h1 className="h5 mb-10 sm:h1 max-xs1:text-xl lg:text-6xl backdrop-blur-sm text-shadow ">
             <div className="pb-5 flex justify-center text-shadow bakdrop-blur-sm bg-gradient-to-r bg-clip-text  text-transparent 
             from-color-russianviolet via-color-yaleblue to-color-russianviolet animate-text">
@@ -75,7 +80,13 @@ const Hero = () => {
               <div className="h-[1.4rem] bg-n-10 rounded-t-[0.9rem]" />
 
               <div className="aspect-[42/40] rounded-b-[0.9rem] overflow-hidden md:aspect-[688/490] lg:aspect-[1024/490]">
-                <ThreeDModel />
+              <img
+                  src={frutal}
+                  className="w-full scale-[1.7] translate-y-[8%] md:scale-[1] md:-translate-y-[10%] lg:-translate-y-[23%]"
+                  width={1024}
+                  height={490}
+                  alt="Frutal"
+                />
 
                 <Generating className="absolute left-4 right-4 bottom-5 md:left-1/2 md:right-auto md:bottom-8 md:w-[31rem] md:-translate-x-1/2" />
 
