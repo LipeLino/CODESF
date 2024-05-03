@@ -9,6 +9,7 @@ import Generating from "./Generating";
 import Notification from "./Notification";
 import CompanyLogos from "./CompanyLogos";
 import TypeWriterEffect from "react-typewriter-effect";
+import { ThreeDModel } from './3D/3d.jsx';
 
 const myAppRef = document.querySelector(".scrollable-div");
 
@@ -63,6 +64,7 @@ const Hero = () => {
             desenvolvimento sustentável de Frutal, visando torná-la uma cidade
             moderna, acolhedora e próspera.
           </p>
+
           <Button href="#organizacao" white>
             SOBRE O CODESF
           </Button>
@@ -72,7 +74,7 @@ const Hero = () => {
             <div className="relative bg-n-8 rounded-[1rem]">
               <div className="h-[1.4rem] bg-n-10 rounded-t-[0.9rem]" />
 
-              <div className="aspect-[33/40] rounded-b-[0.9rem] overflow-hidden md:aspect-[688/490] lg:aspect-[1024/490]">
+              <div className="aspect-[42/40] rounded-b-[0.9rem] overflow-hidden md:aspect-[688/490] lg:aspect-[1024/490]">
                 <img
                   src={frutal}
                   className="w-full scale-[1.7] translate-y-[8%] md:scale-[1] md:-translate-y-[10%] lg:-translate-y-[23%]"
@@ -108,7 +110,7 @@ const Hero = () => {
           <BackgroundCircles className="animate-rotate-slow" />
         </div>
 
-        <CompanyLogos className="hidden relative z-10 mt-20 lg:block backdrop-blur-sm text-shadow overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)] group" />
+        <CompanyLogos className="hidden relative z-10 mt-20 lg:block backdrop-blur-sm drop-shadow-2xl overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)] group" />
       </div>
 
       <BottomLine />

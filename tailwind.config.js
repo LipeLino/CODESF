@@ -50,7 +50,7 @@ export default {
         'infinite-scroll': 'infinite-scroll 25s linear infinite',
         'infinite-scroll-slow': 'infinite-scroll-slow 50s linear infinite',
         bounce: 'bounce 2s infinite',
-        bounce2: 'bounce2 5s infinite',
+        bounce2: 'bounce2 6s infinite',
       },
       keyframes: {
         'text': {
@@ -68,8 +68,8 @@ export default {
           '50%': { transform: 'translateY(-15%)' },
         },
         bounce2: {
-          '0%, 100%': { transform: 'translateY(-10%)' },
-          '50%': { transform: 'translateY(-30%)' },
+          '0%, 100%': { transform: 'translateY(2%)' },
+          '50%': { transform: 'translateY(1%)' },
         },
         'infinite-scroll': {
           from: { transform: 'translateX(0)' },
