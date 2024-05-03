@@ -46,6 +46,11 @@ import service3 from "./services/service-3.jpg";
 
 import lines from "./news/lines.svg";
 import stars from "./news/stars.svg";
+import imagenews1 from "./news/image-1.jpg";
+import imagenews2 from "./news/image-2.jpg";
+import imagenews3 from "./news/image-3.jpg";
+import leftarrow from "./leftarrow.svg";
+import rightarrow from "./rightarrow.svg";
 
 import coins from "./roadmap/coins.png";
 import done from "./roadmap/done.svg";
@@ -87,6 +92,8 @@ export {
   logocodesf2,
   logocodesf1notext,
   logocodesf2notext,
+  leftarrow,
+  rightarrow,
   check,
   check2,
   loading1,
@@ -126,6 +133,9 @@ export {
   service3,
   lines,
   stars,
+  imagenews1,
+  imagenews2,
+  imagenews3,
   coins,
   done,
   hero,

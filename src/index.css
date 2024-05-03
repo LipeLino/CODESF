@@ -6,6 +6,36 @@
 @tailwind components;
 @tailwind utilities;
 
+.custom-dot-list-style {
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  list-style: none;
+  width: 100%;
+}
+
+.custom-dot-list-style li {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.custom-dot-list-style button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  transition: all 0.3s ease;
+}
+
+.custom-dot-list-style button:hover {
+  transform: scale(1.2);
+}
+.carousel-item {
+  transition: transform 0.3s ease-in-out;
+}
+
 .backdrop-hack {
   @apply absolute inset-0 -z-1 bg-transparent;
 }

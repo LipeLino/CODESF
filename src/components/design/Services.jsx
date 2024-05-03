@@ -17,7 +17,7 @@ export const Gradient = () => {
 
 export const PhotoChatMessage = () => {
   return (
-    <div className="absolute top-8 right-8 max-w-[17.5rem] py-6 px-8 bg-color-russianviolet text-color-ivory rounded-t-xl rounded-bl-xl font-code text-base lg:top-[14rem] lg:right-[4rem] lg:max-w-[17.5rem]">
+    <div className="absolute max-lg:top-[25rem] top-8 right-8 max-w-[17.5rem] py-6 px-8 bg-color-russianviolet text-color-ivory rounded-t-xl rounded-bl-xl font-code text-base lg:top-[14rem] lg:right-[4rem] lg:max-w-[17.5rem]">
       Conectando Frutal
       <ChatBubbleWing className="absolute left-full bottom-0" />
     </div>

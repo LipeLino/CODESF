@@ -44,6 +44,9 @@ import {
   telegram,
   twitter,
   yourlogo,
+  imagenews1,
+  imagenews2,
+  imagenews3,
 } from "../assets";
 
 export const navigation = [
@@ -221,35 +224,32 @@ export const collabApps = [
 export const News = [
   {
     id: "0",
-    title: "Basic",
-    description: "AI chatbot, personalized recommendations",
-    price: "0",
-    features: [
-      "An AI chatbot that can understand your queries",
-      "Personalized recommendations based on your preferences",
-      "Ability to explore the app and its features without any cost",
+    title: "CODESF aprova projeto de expansão da ciclovia na Avenida Goiás",
+    timestamp: "10/06/2024, às 10:00h",
+    image: imagenews1,
+    contact: "false",
+    text: [
+      "O CODESF informa a aprovação do projeto de expansão da ciclovia na Avenida Goiás. A obra, prevista para iniciar em setembro de 2024, tem como objetivo incentivar o uso de bicicletas como meio de transporte alternativo e sustentável. O projeto contempla a criação de novas rotas e a melhoria da infraestrutura cicloviária existente."
     ],
   },
   {
     id: "1",
-    title: "Premium",
-    description: "Advanced AI chatbot, priority support, analytics dashboard",
-    price: "9.99",
-    features: [
-      "An advanced AI chatbot that can understand complex queries",
-      "An analytics dashboard to track your conversations",
-      "Priority support to solve issues quickly",
+    title: "CODESF abre inscrições para o programa 'Capacita Frutal'",
+    timestamp: "18/05/2024, às 15:45h",
+    image: imagenews2,
+    contact: null,
+    text: [
+      "O CODESF está com inscrições abertas para o programa 'Capacita Frutal'. A iniciativa oferece cursos gratuitos de qualificação profissional nas áreas de tecnologia, turismo e empreendedorismo. As inscrições podem ser realizadas pelo site da CODESF até o dia 30 de maio de 2024. Não perca essa oportunidade de aprimorar seus conhecimentos e ampliar suas chances no mercado de trabalho!"
     ],
   },
   {
     id: "2",
-    title: "Enterprise",
-    description: "Custom AI chatbot, advanced analytics, dedicated account",
-    price: null,
-    features: [
-      "An AI chatbot that can understand your queries",
-      "Personalized recommendations based on your preferences",
-      "Ability to explore the app and its features without any cost",
+    title: "Conselho Municipal de Trânsito se reúne para discutir melhorias no transporte público",
+    timestamp: "24/05/2024, às 18:20h",
+    image: imagenews3,
+    contact: "false",
+    text: [
+      "O Conselho Municipal de Trânsito (CMT) de Frutal se reúne na próxima semana para discutir melhorias no sistema de transporte público municipal. O encontro contará com a participação de representantes da CODESF, empresas de ônibus e sociedade civil. Na pauta, temas como a ampliação da frota, a criação de novas linhas e a integração tarifária serão debatidos. A reunião é aberta ao público e acontecerá no dia 10 de maio de 2024, às 19h, no auditório da Câmara Municipal."
     ],
   },
 ];
