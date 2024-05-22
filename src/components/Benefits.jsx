@@ -21,7 +21,7 @@ const Benefits = () => {
           />
         </div>
 
-        <div className="flex flex-wrap 2xl:gap-5 mb-10 justify-between">
+        <div className="flex flex-wrap gap-5 mb-10 justify-between">
           {benefits.slice(0, 3).map((item) => (
             <div
               className="group block relative p-0.5 bg-no-repeat bg-[length:100%_100%] md:max-w-[24rem]"
@@ -78,7 +78,7 @@ const Benefits = () => {
           />
         </div>
 
-        <div className="flex flex-wrap 2xl:gap-5 mb-10 justify-between">
+        <div className="flex flex-wrap gap-5 mb-10 justify-between">
           {benefits.slice(3).map((item) => (
             <div
               className="group block relative p-0.5 bg-no-repeat bg-[length:100%_100%] md:max-w-[24rem]"

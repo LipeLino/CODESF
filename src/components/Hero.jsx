@@ -1,4 +1,4 @@
-import { curve, frutal, gradientblue } from "../assets";
+import { curve, frutal, gradientblue, videofrutal } from "../assets";
 import Button from "./Button";
 import Section from "./Section";
 import { BackgroundCircles, BottomLine, Gradient } from "./design/Hero";
@@ -18,69 +18,76 @@ const Hero = () => {
 
   return (
     <Section
-      className="pt-[14.6rem] -mt-[5.25rem]"
+      className="relative pt-[14.6rem] -mt-[5.25rem] overflow-hidden"
       crosses
-      crossesOffset="lg:translate-y-[116.5rem]"
-      customPaddings
+      crossesOffset="lg:translate-y-[135rem]"
       id="hero"
     >
-      <div className="container relative" ref={parallaxRef}>
-        <div className="relative z-1 max-w-[62rem] mx-auto text-center mb-[3.875rem] md:mb-20 lg:mb-[6.25rem]">
+      <video
+        autoPlay
+        loop
+        muted
+        className="absolute top-12 left-0 lg:w-full h-100vh object-cover max-lg:mt-10"
+      >
+        <source src={videofrutal} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div className="relative mt-10 z-1 max-w-[62rem] max-lg:-mt-10 mx-auto text-center mb-[3.875rem] md:mb-20 lg:mb-[6.25rem]">
         <img
-              src={gradientblue}
-              className="absolute -top-10 w-full h-[14rem] object-cover opacity-80 blur-3xl rounded-extra-3xl"
-              alt="Gradient Background"
+          src={gradientblue}
+          className="absolute -top-10 w-full h-[14rem] object-cover opacity-80 blur-3xl rounded-extra-3xl"
+          alt="Gradient Background"
+        />
+        <h1 className="h5 mb-10 sm:h1 max-xs1:text-xl lg:text-6xl backdrop-blur-0 text-shadow rounded-extra4xl">
+          <div className="pb-5 flex justify-center text-shadow bakdrop-blur-sm bg-gradient-to-r bg-clip-text text-transparent 
+            from-color-russianviolet via-color-yaleblue to-color-russianviolet animate-text">
+            <TypeWriterEffect
+              startDelay={100}
+              cursorColor="white"
+              text="Explore o Futuro de Frutal"
+              typeSpeed={100}
+              scrollArea={myAppRef}
+              hideCursorAfterText={true}
             />
-          <h1 className="h5 mb-10 sm:h1 max-xs1:text-xl lg:text-6xl backdrop-blur-sm text-shadow ">
-            <div className="pb-5 flex justify-center text-shadow bakdrop-blur-sm bg-gradient-to-r bg-clip-text  text-transparent 
+          </div>
+          <span className="inline-block relative">
+            <div className="flex justify-center text-shadow bakdrop-blur-sm bg-gradient-to-r bg-clip-text text-transparent 
             from-color-russianviolet via-color-yaleblue to-color-russianviolet animate-text">
               <TypeWriterEffect
-                startDelay={100}
+                startDelay={3200}
                 cursorColor="white"
-                text="Explore o Futuro de Frutal"
-                typeSpeed={100}
+                text="CODESF"
+                typeSpeed={200}
                 scrollArea={myAppRef}
                 hideCursorAfterText={true}
               />
             </div>
-            <span className="inline-block relative">
-              <div className="flex justify-center text-shadow bakdrop-blur-sm bg-gradient-to-r bg-clip-text  text-transparent 
-            from-color-russianviolet via-color-yaleblue to-color-russianviolet animate-text">
-                <TypeWriterEffect
-                  startDelay={3200}
-                  cursorColor="white"
-                  text="CODESF"
-                  typeSpeed={200}
-                  scrollArea={myAppRef}
-                  hideCursorAfterText={true}
-                />
-              </div>
-              <img
-                src={curve}
-                className="absolute top-full left-0 w-full xl:-mt-2 pt-2"
-                width={624}
-                height={28}
-                alt="Curve"
-              />
-            </span>
-          </h1>
-          <p className="body-1 max-w-3xl mx-auto mb-6 text-n-2 lg:mb-8 text-shadow backdrop-blur-sm max-lg:text-center">
-            O CODESF reúne diversos setores da sociedade para impulsionar o
-            desenvolvimento sustentável de Frutal, visando torná-la uma cidade
-            moderna, acolhedora e próspera.
-          </p>
-
-          <Button href="#organizacao" white>
-            SOBRE O CODESF
-          </Button>
-        </div>
+            <img
+              src={curve}
+              className="absolute top-full left-0 w-full xl:-mt-2 pt-2"
+              width={624}
+              height={28}
+              alt="Curve"
+            />
+          </span>
+        </h1>
+        <p className="body-1 max-w-3xl mx-auto mb-6 text-n-2 lg:mb-8 text-shadow backdrop-blur-0 max-lg:text-center rounded-extra-4xl max-lg:py-4">
+          O CODESF reúne diversos setores da sociedade para impulsionar o
+          desenvolvimento sustentável de Frutal, visando torná-la uma cidade
+          moderna, acolhedora e próspera.
+        </p>
+        <Button href="#organizacao" white>
+          SOBRE O CODESF
+        </Button>
+      </div>
+      <div className="container relative lg:mt-100vh" ref={parallaxRef}>
         <div className="relative max-w-[23rem] mx-auto md:max-w-5xl xl:mb-24">
           <div className="relative z-1 p-0.5 rounded-2xl">
             <div className="relative bg-n-8 rounded-[1rem]">
               <div className="h-[1.4rem] bg-n-10 rounded-t-[0.9rem]" />
 
               <div className="aspect-[42/40] rounded-b-[0.9rem] overflow-hidden md:aspect-[688/490] lg:aspect-[1024/490]">
-              <img
+                <img
                   src={frutal}
                   className="w-full scale-[1.7] translate-y-[8%] md:scale-[1] md:-translate-y-[10%] lg:-translate-y-[23%]"
                   width={1024}
@@ -119,7 +126,6 @@ const Hero = () => {
       </div>
 
       <BottomLine />
-
     </Section>
   );
 };
