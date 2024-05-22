@@ -16,6 +16,10 @@ export default {
       ...defaultTheme.screens,
     },
     extend: {
+      margin: {
+        '1vh': '1vh',
+        '100vh': '100vh',
+      },
       textShadow: {
         sm: '0 1px 2px var(--tw-shadow-color)',
         DEFAULT: '0 2px 4px var(--tw-shadow-color)',
@@ -112,9 +116,12 @@ export default {
         'extra-xl': '3rem',
         'extra-2xl': '4rem',
         'extra-3xl': '5rem',
+        'extra-4xl': '6rem',
       },
       textShadow: {
-        DEFAULT: "0 0.0625rem 0.125rem rgba(0, 0, 0, 0.25)",
+        DEFAULT: "0 0.0625rem 0.125rem rgba(0, 0, 0, 0.50)",
+        'sm': "0 0.0625rem 2.125rem rgba(0, 0, 0, 0.25)",
+
       },
       transitionDuration: {
         DEFAULT: "200ms",
