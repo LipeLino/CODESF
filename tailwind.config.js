@@ -19,6 +19,9 @@ export default {
       margin: {
         '1vh': '1vh',
         '100vh': '100vh',
+        '110vh': '110vh',
+        '115vh': '115vh',
+        '120vh': '120vh',
       },
       textShadow: {
         sm: '0 1px 2px var(--tw-shadow-color)',
