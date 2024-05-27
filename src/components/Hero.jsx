@@ -9,6 +9,7 @@ import Generating from "./Generating";
 import Notification from "./Notification";
 import CompanyLogos from "./CompanyLogos";
 import TypeWriterEffect from "react-typewriter-effect";
+import PlusSvg from "../assets/svg/PlusSvg";
 import ThreeDModel from './3D/3d.jsx';
 
 const myAppRef = document.querySelector(".scrollable-div");
@@ -19,20 +20,34 @@ const Hero = () => {
   return (
     <Section
       className="relative pt-[14.6rem] -mt-[5.25rem] overflow-hidden"
-      crosses
-      crossesOffset="lg:translate-y-[135rem]"
       id="hero"
     >
+    <div>
+    <>
+      <div className="hidden absolute top-[3rem] left-0 right-0 h-0.25 bg-n-6 pointer-events-none xl:block z-2" />
+
+      <PlusSvg className="hidden absolute top-[2.6875rem] left-[2.1875rem] z-2 pointer-events-none xl:block" />
+
+      <PlusSvg className="hidden absolute top-[2.6875rem] right-[2.1875rem] z-2 pointer-events-none xl:block" />
+    </>
       <video
         autoPlay
         loop
         muted
-        className="absolute top-12 left-0 lg:w-full h-100vh object-cover max-lg:mt-10"
+        className="absolute top-12 lg:px-10 w-screen h-100vh object-cover max-lg:mt-10"
       >
         <source src={videofrutal} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
-      <div className="relative mt-10 z-1 max-w-[62rem] max-lg:-mt-10 mx-auto text-center mb-[3.875rem] md:mb-20 lg:mb-[6.25rem]">
+    <div>
+      <div className="hidden absolute top-[119.8vh] left-0 right-0 h-0.25 bg-n-6 pointer-events-none xl:block z-2" />
+
+      <PlusSvg className="hidden absolute top-[119.2vh] left-[2.1875rem] z-2 pointer-events-none xl:block" />
+
+      <PlusSvg className="hidden absolute top-[119.2vh] right-[2.1875rem] z-2 pointer-events-none xl:block" />
+    </div>
+    </div>
+      <div className="relative mt-40 z-1 max-w-[62rem] max-lg:-mt-10 mx-auto text-center mb-[3.875rem] md:mb-20 lg:mb-[6.25rem]">
         <img
           src={gradientblue}
           className="absolute -top-10 w-full h-[14rem] object-cover opacity-80 blur-3xl rounded-extra-3xl"
@@ -80,21 +95,21 @@ const Hero = () => {
           SOBRE O CODESF
         </Button>
       </div>
-      <div className="container relative lg:mt-100vh" ref={parallaxRef}>
+      <div className="container relative lg:mt-120vh" ref={parallaxRef}>
         <div className="relative max-w-[23rem] mx-auto md:max-w-5xl xl:mb-24">
           <div className="relative z-1 p-0.5 rounded-2xl">
-            <div className="relative bg-n-8 rounded-[1rem]">
-              <div className="h-[1.4rem] bg-n-10 rounded-t-[0.9rem]" />
+            <div className="relative bg-n-8/50 rounded-[1rem] z-50 shadow-xl">
+              <div className="h-[1.4rem] bg-n-1 rounded-t-[0.9rem]" />
 
               <div className="aspect-[42/40] rounded-b-[0.9rem] overflow-hidden md:aspect-[688/490] lg:aspect-[1024/490]">
                 <img
                   src={frutal}
-                  className="w-full scale-[1.7] translate-y-[8%] md:scale-[1] md:-translate-y-[10%] lg:-translate-y-[23%]"
+                  className="w-full scale-[1.7] translate-y-[8%] md:scale-[1] md:-translate-y-[10%] lg:-translate-y-[13%] z-0"
                   width={1024}
                   height={490}
                   alt="Frutal"
                 />
-
+                
                 <Generating className="absolute left-4 right-4 bottom-5 md:left-1/2 md:right-auto md:bottom-8 md:w-[31rem] md:-translate-x-1/2" />
 
                 <ScrollParallax isAbsolutelyPositioned>
@@ -124,8 +139,6 @@ const Hero = () => {
 
         <CompanyLogos className="hidden relative z-10 mt-20 lg:block backdrop-blur-sm drop-shadow-2xl overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)] group" />
       </div>
-
-      <BottomLine />
     </Section>
   );
 };
