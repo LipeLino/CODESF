@@ -22,7 +22,8 @@ const Hero = () => {
       className="relative pt-[14.6rem] -mt-[5.25rem] overflow-hidden"
       id="hero"
     >
-    <div>
+    
+    <div className="relative flex flex-col h-screen">
     <>
       <div className="hidden absolute top-[3rem] left-0 right-0 h-0.25 bg-n-6 pointer-events-none xl:block z-2" />
 
@@ -30,23 +31,26 @@ const Hero = () => {
 
       <PlusSvg className="hidden absolute top-[2.6875rem] right-[2.1875rem] z-2 pointer-events-none xl:block" />
     </>
+    <div className="relative flex-grow">
       <video
         autoPlay
         loop
         muted
-        className="absolute top-12 lg:px-10 w-screen h-100vh object-cover max-lg:mt-10"
+        className="w-full h-full object-cover"
       >
         <source src={videofrutal} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
-    <div>
-      <div className="hidden absolute top-[119.8vh] left-0 right-0 h-0.25 bg-n-6 pointer-events-none xl:block z-2" />
+      <div className="absolute bottom-0 left-0 right-0">
+        <div className="hidden absolute bottom-[0.6vh] left-0 right-0 h-0.25 bg-n-6 pointer-events-none xl:block z-2" />
 
-      <PlusSvg className="hidden absolute top-[119.2vh] left-[2.1875rem] z-2 pointer-events-none xl:block" />
+        <PlusSvg className="hidden absolute bottom-[1.2vh] left-[2.1875rem] z-2 pointer-events-none xl:block" />
 
-      <PlusSvg className="hidden absolute top-[119.2vh] right-[2.1875rem] z-2 pointer-events-none xl:block" />
+        <PlusSvg className="hidden absolute bottom-[1.2vh] right-[2.1875rem] z-2 pointer-events-none xl:block" />
+      </div>
     </div>
     </div>
+
       <div className="relative mt-40 z-1 max-w-[62rem] max-lg:-mt-10 mx-auto text-center mb-[3.875rem] md:mb-20 lg:mb-[6.25rem]">
         <img
           src={gradientblue}
