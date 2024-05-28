@@ -90,9 +90,10 @@ const Hero = () => {
         <Button href="#organizacao" white>
           SOBRE O CODESF
         </Button>
-      </div>
-      <div className="container relative lg:mt-120vh" ref={parallaxRef}>
-        <div className="relative max-w-[23rem] mx-auto md:max-w-5xl xl:mb-24">
+      </div>    
+      
+      <div className="container relative mt-120vh" ref={parallaxRef}>              
+        <div className="relative max-w-[23rem] mx-auto md:max-w-5xl xl:mb-24">        
           <div className="relative z-1 p-0.5 rounded-2xl">
             <div className="relative bg-n-8/50 rounded-[1rem] z-50 shadow-xl">
               <div className="h-[1.4rem] bg-n-1 rounded-t-[0.9rem]" />
@@ -100,7 +101,7 @@ const Hero = () => {
               <div className="aspect-[42/40] rounded-b-[0.9rem] overflow-hidden md:aspect-[688/490] lg:aspect-[1024/490]">
                 <img
                   src={frutal}
-                  className="w-full scale-[1.7] translate-y-[8%] md:scale-[1] md:-translate-y-[10%] lg:-translate-y-[13%] z-0"
+                  className="w-full scale-[1.7] translate-y-[25%] md:scale-[1] md:-translate-y-[20%] lg:-translate-y-[18%] z-0"
                   width={1024}
                   height={490}
                   alt="Frutal"

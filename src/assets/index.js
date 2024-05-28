@@ -24,6 +24,9 @@ import chromecast from "./chrome-cast.svg";
 import sliders04 from "./sliders-04.svg";
 import loading from "./loading.png";
 import background from "./background.jpg";
+import nature from "./environment.png";
+import finance from "./finance.png";
+import idea from "./idea.png";
 
 import curve from "./hero/curve.png";
 import frutal from "./hero/frutal.jpg";
@@ -90,6 +93,9 @@ import twitter from "./socials/twitter.svg";
 
 export {
   videofrutal,
+  nature,
+  finance,
+  idea,
   gradientblue,
   logo,
   logocodesf1,
