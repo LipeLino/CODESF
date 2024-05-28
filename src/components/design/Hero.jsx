@@ -15,12 +15,19 @@ export const Gradient = () => {
 export const BottomLine = () => {
   return (
     <>
-      <div className="hidden absolute top-[55.25rem] left-10 right-10 h-0.25 bg-n-6 pointer-events-none xl:block" />
+      <div className="hidden absolute top-[53rem] left-0 right-0 h-0.25 bg-n-6 pointer-events-none xl:block z-2" />
 
-      <PlusSvg className="hidden absolute top-[54.9375rem] left-[2.1875rem] z-2 pointer-events-none xl:block" />
+      <PlusSvg className="hidden absolute top-[52.7375rem] left-[2.1875rem] z-2 pointer-events-none xl:block" />
 
-      <PlusSvg className="hidden absolute top-[54.9375rem] right-[2.1875rem] z-2 pointer-events-none xl:block" />
+      <PlusSvg className="hidden absolute top-[52.7375rem] right-[2.1875rem] z-2 pointer-events-none xl:block" />
+
+      <div className="block absolute top-[55.5rem] left-0 right-0 h-0.25 bg-n-6 pointer-events-none xl:hidden z-0" />
+
+      <PlusSvg className="block absolute top-[55.1675rem] left-[1.1875rem] z-2 pointer-events-none xl:hidden" />
+
+      <PlusSvg className="block absolute top-[55.1675rem] right-[1.1875rem] z-2 pointer-events-none xl:hidden" />
     </>
+    
   );
 };
 
@@ -49,7 +56,7 @@ export const BackgroundCircles = ({ parallaxRef }) => {
 
       {/* Moving background colored circle balls */}
 
-      <MouseParallax strength={2} delay={1} parallaxContainerRef={parallaxRef}>
+      <MouseParallax strength={0.07} delay={1} parallaxContainerRef={parallaxRef}>
         <div className="animate-rotate-slow-46 transform-rotate-46 absolute bottom-1/2 left-1/2 w-0.25 h-1/2 origin-bottom rotate-[46deg]">
           <div
             className={`w-2 h-2 -ml-1 -mt-36 bg-gradient-to-b from-[#DD734F] to-[#1A1A32] rounded-full transition-transform duration-1000 ease-out ${mounted ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
