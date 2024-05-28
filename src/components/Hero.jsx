@@ -39,8 +39,8 @@ const Hero = () => {
           <source src={videofrutal} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-        <div className="top-12">
-          <div className="hidden absolute top-[119.8vh] left-0 right-0 h-0.25 bg-n-6 pointer-events-none xl:block z-2" />
+        <div>
+          <div className="hidden absolute bottom-0 top-[119.8vh] left-0 right-0 h-0.25 bg-n-6 pointer-events-none xl:block z-2" />
 
           <PlusSvg className="hidden absolute top-[119.2vh] left-[2.1875rem] z-2 pointer-events-none xl:block" />
 
