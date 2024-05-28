@@ -70,34 +70,34 @@ export const BackgroundCircles = ({ parallaxRef }) => {
       style={{ position: 'relative', zIndex: 100 }}
     >
       <div>
-        <p className="max-lg:text-sm max-lg:text-justify w-[40vh] lg:w-[32rem] right-0 lg:translate-x-[5rem] translate-x-[26rem] z-50 relative h-auto
+        <p className="max-lg:text-sm max-lg:text-justify w-[40vh] lg:w-[32rem] right-0 lg:translate-x-[6rem] max-lg:mx-auto z-50 relative h-auto
             text-shadow bakdrop-blur-sm bg-gradient-to-r bg-clip-text text-transparent 
             from-color-russianviolet via-color-yaleblue to-color-russianviolet animate-text">
           A história do CODESF começou em 2023, inspirada pelo modelo de governança de Rio Verde (GO), com o objetivo de impulsionar o desenvolvimento de Frutal através do empreendedorismo e da participação ativa da sociedade civil.
         </p>
         <img
           src={idea}
-          className="max-lg:left-[55%] max-lg:top-[6rem] absolute size-20 right-[10rem] z-50 top-[1rem] animate-bounce"
+          className="max-lg:left-[40%] max-lg:top-[22rem] absolute size-20 right-[10rem] z-50 top-[1rem] animate-bounce"
           alt="Idea"
         />
-        <p className="max-lg:text-sm max-lg:text-justify w-[40vh] lg:w-[32rem] left-0 py-[10rem] max-lg:pt-[5rem] max-lg:pb-[8rem] lg:py-10 text-right lg:translate-x-[40rem] z-50 relative translate-x-[26rem] h-auto
+        <p className="max-lg:text-sm max-lg:text-justify w-[40vh] lg:w-[32rem] left-0 py-[10rem] max-lg:pt-[5rem] max-lg:pb-[8rem] lg:py-10 text-right lg:translate-x-[40rem] z-50 relative max-lg:mx-auto h-auto
             text-shadow bakdrop-blur-sm bg-gradient-to-r bg-clip-text text-transparent 
           from-color-russianviolet via-color-yaleblue to-color-russianviolet animate-text">
           Fundado em janeiro de 2024, o CODESF rapidamente se organizou em Câmaras Técnicas focadas em áreas estratégicas como investimentos, desenvolvimento urbano, meio ambiente, energia, tecnologia, dados e saúde.
         </p>
         <img
           src={finance}
-          className="max-lg:left-[40%] max-lg:top-[20rem] absolute size-22 left-[10rem] z-50 top-[9rem] animate-bounce"
+          className="max-lg:mx-auto max-lg:left-[46%] max-lg:transform max-lg:-translate-x-1/2 max-lg:top-[8rem] absolute size-22 left-[10rem] z-50 top-[9rem] animate-bounce"
           alt="Finance"
         />
-        <p className="max-lg:text-sm max-lg:text-justify w-[40vh] lg:w-[40rem] right-0 lg:translate-x-[5rem] translate-x-[26rem] z-50 relative h-auto
+        <p className="max-lg:text-sm max-lg:text-justify w-[40vh] lg:w-[40rem] right-0 lg:translate-x-[6rem] max-lg:mx-auto z-50 relative h-auto
             text-shadow bakdrop-blur-sm bg-gradient-to-r bg-clip-text text-transparent 
           from-color-russianviolet via-color-yaleblue to-color-russianviolet animate-text">
           Desde então, o CODESF tem realizado projetos como atração de novas empresas, elaboração do Plano Diretor e desenvolvimento do mercado de tecnologia, além de planejar um fundo de microcrédito, um Distrito Industrial, um curso de Medicina na UEMG e um hospital privado, demonstrando seu compromisso com o desenvolvimento socioeconômico de Frutal.
         </p>
         <img
           src={nature}
-          className="max-lg:left-[55%] max-lg:top-[35rem] absolute size-[8rem] right-[8rem] z-50 top-[17rem] animate-bounce"
+          className="max-lg:left-[52%] max-lg:top-[20rem] absolute size-[8rem] right-[8rem] z-50 top-[17rem] animate-bounce"
           alt="Nature"
         />
       </div>

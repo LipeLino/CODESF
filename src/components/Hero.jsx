@@ -92,7 +92,7 @@ const Hero = () => {
         </Button>
       </div>    
       
-      <div className="container relative mt-120vh" ref={parallaxRef}>              
+      <div className="container relative mt-[50rem] max-lg:mt-[67rem]" ref={parallaxRef}>              
         <div className="relative max-w-[23rem] mx-auto md:max-w-5xl xl:mb-24">        
           <div className="relative z-1 p-0.5 rounded-2xl">
             <div className="relative bg-n-8/50 rounded-[1rem] z-50 shadow-xl">
