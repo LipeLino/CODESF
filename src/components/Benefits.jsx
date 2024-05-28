@@ -4,8 +4,17 @@ import Section from "./Section";
 import Arrow from "../assets/svg/Arrow";
 import { GradientLight } from "./design/Benefits";
 import ClipPath from "../assets/svg/ClipPath";
+import React, { useState } from 'react';
+import Modal from 'react-bootstrap/Modal';
+import Button from 'react-bootstrap/Button';
 
 const Benefits = () => {
+
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
   return (
     <Section id="organizacao">
       <div className="container relative z-2">
@@ -40,9 +49,23 @@ const Benefits = () => {
                     height={48}
                     alt={item.title}
                   />
-                  <p className="ml-auto font-code text-xs font-bold text-n-1 uppercase tracking-wider">
+                  <p 
+                    className="ml-auto font-code text-xs font-bold text-n-1 uppercase tracking-wider"
+                    
+                  >
                     Saiba mais
                   </p>
+
+                  <div className="absolute -top-10 bg-color-ivory/90 py-2 background-blur-lg p-2 rounded-2xl text-n-1 text-sm font-semibold whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200 scale-0 group-hover:scale-100 animate-bounce">
+                    {item.people && item.people.split(',').map((person, index) => (
+                      <span key={index}>
+                        {person.trim()}
+                        <br />
+                      </span>
+                    ))}
+                  </div>
+
+
                   <Arrow />
                 </div>
               </div>
@@ -85,7 +108,7 @@ const Benefits = () => {
               style={{
                 backgroundImage: `url(${item.backgroundUrl})`,
               }}
-              key={item.id}
+              key={item.id}              
             >
               <div className="relative z-2 flex flex-col min-h-[22rem] p-[2.4rem] pointer-events-none">
                 <h5 className="h5 mb-5 backdro-blur-md font-bold">{item.title}</h5>
@@ -97,9 +120,38 @@ const Benefits = () => {
                     height={48}
                     alt={item.title}
                   />
-                  <p className="ml-auto font-code text-xs font-bold text-n-1 uppercase tracking-wider">
+                  <button 
+                    className="ml-auto font-code text-xs font-bold text-n-1 uppercase tracking-wider"  
+                    onClick={handleShow}                    
+                  >
                     Saiba mais
-                  </p>
+                  </button>
+
+                  <div className="absolute -top-10 right-80 bg-color-ivory/90 py-2 background-blur-lg p-2 rounded-2xl text-n-1 text-sm font-semibold whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200 scale-0 group-hover:scale-100 animate-bounce">
+                    {item.people && item.people.split(',').map((person, index) => (
+                      <span key={index}>
+                        {person.trim()}
+                        <br />
+                      </span>
+                    ))}
+                  </div>
+
+                  <Modal show={show} onHide={handleClose}>
+                    <Modal.Header closeButton>
+                      <Modal.Title>Modal heading</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>
+                      <p>Paragraph 1</p>
+                      <p>Paragraph 2</p>
+                      <p>Paragraph 3</p>
+                    </Modal.Body>
+                    <Modal.Footer>
+                      <Button variant="secondary" onClick={handleClose}>
+                        Close
+                      </Button>
+                    </Modal.Footer>
+                  </Modal>
+
                   <Arrow />
                 </div>
               </div>

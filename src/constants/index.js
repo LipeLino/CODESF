@@ -258,6 +258,7 @@ export const benefits = [
   {
     id: "0",
     title: "Atração de Investimentos",
+    people:"Dino Marques de Oliveira - Coordenador, Tiago Queiroz de Queiroz, Aldiberto Dias Machado Júnior, Maria Fernanda Clemente Petersen, Leopoldo Galvão Morais Campos",
     text: "Potencializando negócios e recursos para o crescimento econômico de Frutal.",
     backgroundUrl: benefitCard1, 
     iconUrl: benefitIcon1,
@@ -267,6 +268,7 @@ export const benefits = [
   {
     id: "1",
     title: "Desenvolvimento Urbano",
+    people:"Paulo Roberto Coelho - Coordenador, João de Deus Braga Júnior, David Carlos de Oliveira, Laydison Santos Marra",
     text: "Desenhando o futuro de Frutal: uma cidade mais verde, inteligente e conectada.",
     backgroundUrl: benefitCard2,
     iconUrl: benefitIcon2,
@@ -294,6 +296,7 @@ export const benefits = [
   {
     id: "4",
     title: "Ciência, Tecnologia e Inovação:",
+    people:"Ivan José dos Reis Filho – Coordenador, Gustavo Gravatim (UEMG), Fábio Rodrigues (UEMG), Tais Arthur (UEMG), Pedro Paulo (Objetivo), Allynson Fujita (UEMG), Bruno Ruiz (Cidade Imperial), Fábio Muniz (Cidade Imperial), Weder Martins (Prefeitura), Matheus Frazão (Empreendedor TI), Amilton Soares (Empreendedor TI), Samuel Silvério (Empreendedor Info), Glauber Ribeiro (Cerradão), Leonardo Barcelos (UEMG), Sérgio Portari (UEMG), Leandro Macedo (Cerradão), Joana Rafaela (SEBRAE), Danilo Santos (Grupo JB), Fabrício Cistolo (Cerradão), Josnei Freitas (UEMG), Leandro Queiroz (Consultor)",
     text: "Os pilares do desenvolvimento, gerando novos produtos, serviços e soluções para os desafios da sociedade.",
     backgroundUrl: benefitCard5,
     iconUrl: benefitIcon5,
@@ -303,6 +306,7 @@ export const benefits = [
   {
     id: "5",
     title: "Saúde",
+    people:"Daniel Godoi Bernardes da Silva - Coordenador, Leandro Augusto Pantaleão, Carlos Alfredo Salci Queiroz",
     text: "Bem-estar e qualidade de vida: investindo em ações de promoção da saúde, prevenção de doenças e saúde integral. Com gestão eficiente e planejamento consciente.",
     backgroundUrl: benefitCard6,
     iconUrl: benefitIcon6,
