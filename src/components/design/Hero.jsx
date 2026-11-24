@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { MouseParallax } from "react-just-parallax";
-import { nature, idea, finance} from "/workspaces/CODESF/src/assets/index.js";
+import { nature, idea, finance} from "../../assets/index.js";
 
 import PlusSvg from "../../assets/svg/PlusSvg";
 
