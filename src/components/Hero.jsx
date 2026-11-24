@@ -8,11 +8,10 @@ import { useRef } from "react";
 import Generating from "./Generating";
 import Notification from "./Notification";
 import CompanyLogos from "./CompanyLogos";
-import TypeWriterEffect from "react-typewriter-effect";
+import TypeWriterEffect from "./Typewriter";
 import PlusSvg from "../assets/svg/PlusSvg";
 import ThreeDModel from './3D/3d.jsx';
 
-const myAppRef = document.querySelector(".scrollable-div");
 
 const Hero = () => {
   const parallaxRef = useRef(null);
@@ -57,7 +56,6 @@ const Hero = () => {
               cursorColor="white"
               text="Explore o Futuro de Frutal"
               typeSpeed={100}
-              scrollArea={myAppRef}
               hideCursorAfterText={true}
             />
           </div>
@@ -69,7 +67,6 @@ const Hero = () => {
                 cursorColor="white"
                 text="CODESF"
                 typeSpeed={200}
-                scrollArea={myAppRef}
                 hideCursorAfterText={true}
               />
             </div>
